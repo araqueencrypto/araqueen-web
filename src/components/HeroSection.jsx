@@ -94,13 +94,17 @@ export default function HeroSection() {
           } mb-8`}
         >
           <a
-            href="#tokenomics"
+            href="https://pump.fun/coin/7rJdmuRH3rBYj6cCCfzn2idkPtcRKiTofsZgMbV1pump"
+                 target="_blank"
+              rel="noopener noreferrer"
             className="px-5 py-3 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 text-white text-sm md:text-base font-semibold shadow hover:scale-105 transition-transform"
           >
             BUY $AraQ
           </a>
           <a
-            href="#foundation"
+            href="https://drive.google.com/file/d/1-ctfdkHzcajUvy9IPueCkOYop7N7nqSh/view"
+                 target="_blank"
+              rel="noopener noreferrer"
             className="px-5 py-3 rounded-full border border-pink-200 text-pink-600 hover:bg-pink-50 text-sm md:text-base font-semibold transition"
           >
             Whitepaper

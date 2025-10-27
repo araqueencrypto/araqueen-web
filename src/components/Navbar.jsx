@@ -12,6 +12,13 @@ export default function Navbar() {
     { name: "Join", href: "#join" },
   ];
 
+  // 🔹 Fungsi untuk menampilkan pesan saat Launch App diklik
+  const handleLaunchClick = () => {
+    alert(
+      "🛠️ The AraQueen Kingdom ecosystem app is currently under development to facilitate token purchases, staking, progress updates, and more.\n\nJoin our community and we’ll notify you once the app is ready!"
+    );
+  };
+
   return (
     <nav className="fixed top-[38px] left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-md">
       <div className="flex items-center justify-between px-4 md:px-6 py-3 max-w-7xl mx-auto">
@@ -38,7 +45,10 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          <button className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-4 py-1.5 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all">
+          <button
+            onClick={handleLaunchClick}
+            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-4 py-1.5 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
+          >
             Launch App
           </button>
         </div>
@@ -67,7 +77,10 @@ export default function Navbar() {
               </a>
             ))}
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                handleLaunchClick();
+              }}
               className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-5 py-2 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
             >
               Launch App

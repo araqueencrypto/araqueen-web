@@ -1,0 +1,22 @@
+{
+  "pumpfun": {
+    "market_cap": 5800,
+    "price": 0.00000583,
+    "chart": [
+      { "time": 1, "price": 0},
+      { "time": 2, "price": 0 },
+      { "time": 3, "price": 0 },
+      { "time": 4, "price": 0.00000583 }
+    ]
+  },
+  "boopfun": {
+    "market_cap": 6130,
+    "price": 0.00000613,
+    "chart": [
+      { "time": 1, "price": 0},
+      { "time": 2, "price": 0},
+      { "time": 3, "price": 0},
+      { "time": 4, "price": 0.00000613 }
+    ]
+  }
+}
