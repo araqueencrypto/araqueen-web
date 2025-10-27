@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-  "reward": 0.17,
-=======
-  "reward": 10,
->>>>>>> e2f3cc5 (Update UI: Added JoinCTA hrefs, improved Footer, Launch App alert, and hybrid manual chart system)
+ 
+  "reward": 1,
   "target": 150000
 }
