@@ -79,7 +79,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
-          className="text-white-800 max-w-md md:max-w-sm mb-4 text-[15px] leading-relaxed font-medium"
+          className="text-gray-800 max-w-md md:max-w-sm mb-4 text-[15px] leading-relaxed font-normal"
         >
           From memes to meaning — a token that funds reality. Join the citizens
           building a sustainable kingdom.

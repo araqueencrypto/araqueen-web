@@ -77,7 +77,7 @@ export default function KingdomFoundation() {
               viewport={{ once: true }}
               className="bg-white/10 border border-yellow-400/20 rounded-2xl p-6 shadow-lg backdrop-blur-sm hover:shadow-yellow-400/20 transition-all"
             >
-              <h3 className="text-xl font-semibold text-yellow-300 mb-1">
+              <h3 className="text-xl font-semibold text-yellow-300 mb-2">
                 {item.title}
               </h3>
               <p className="text-sm text-gray-300">{item.desc}</p>
@@ -94,10 +94,10 @@ export default function KingdomFoundation() {
         variants={fadeUp}
         className="relative py-28 px-6 text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow-300 mb-6">
           The Royal Classes of AraQueen 👑
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-10 text-sm md:text-base">
+        <p className="text-gray-300 max-w-3xl mx-auto mb-16 text-sm md:text-base">
           Each class holds a sacred duty within the AraQueen Kingdom. Together, they uphold 
           the balance between meme spirit, innovation, and the real-world economy.
         </p>

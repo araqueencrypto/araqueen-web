@@ -113,7 +113,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a href="mailto:info@araqueen.com" className="hover:text-pink-500 transition">
-                Email to : araqueencrypto@gmail.com
+                mailto : araqueencrypto@gmail.com
               </a>
             </li>
             <li>

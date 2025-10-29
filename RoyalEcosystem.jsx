@@ -149,7 +149,12 @@ export default function RoyalEcosystem() {
           A bonding-curve based economy ensures long-term growth, fair rewards, and a self-sustaining royal kingdom.
         </p>
       </motion.section>
-      
+
+      {/* Footer */}
+      <footer className="text-center text-gray-500 text-xs mt-10">
+        © {new Date().getFullYear()} AraQueen Ecosystem — Bridging Digital &
+        Real-World Prosperity.
+      </footer>
     </main>
   );
 }

@@ -21,7 +21,7 @@ export default function RunningText() {
             </a>
           </span>
 
-          <span></span>&
+          <span>&</span>
 
           <span className="flex items-center gap-2">
             <img src="/boopfun.png" alt="Boop.fun" className="w-5 h-5" />
@@ -34,8 +34,6 @@ export default function RunningText() {
               Boop.fun
             </a>
           </span>
-
-          <span></span>
 
           <span>🚀 Join the Kingdom & Earn Your Royal Rewards! 👑</span>
         </div>

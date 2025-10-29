@@ -85,8 +85,8 @@ export default function JourneySection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,200,255,0.15),_transparent_70%)]"></div>
 
       <div className="max-w-6xl mx-auto px-6 z-10">
-        <h2 className="text-4xl font-bold mb -1 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
-          The Royal Market
+        <h2 className="text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
+          The Royal Market of AraQueen 💹
         </h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
           Live global market prices with manual AraQ performance tracking across Pump.fun & Boop.fun.

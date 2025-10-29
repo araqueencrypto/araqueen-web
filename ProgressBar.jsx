@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 export default function ProgressBar() {
   const [progress, setProgress] = useState(0);
   const [current, setCurrent] = useState(0);
-  const [goal, setGoal] = useState(500000);
+  const [goal, setGoal] = useState(150000);
   const [displayed, setDisplayed] = useState(0);
   const prevReward = useRef(0);
   const controls = useAnimation();
