@@ -19,24 +19,24 @@ export default function App() {
       <Navbar />
 
       {/* Konten utama dimulai tepat setelah bar atas */}
-      <main className="relative z-10 pt-[120px] bg-white">
-        <section id="hero" className="scroll-mt-[120px]">
+      <main className="relative z-10 pt-[40px] bg-white">
+        <section id="hero" className="scroll-mt-[40px]">
           <HeroSection />
         </section>
 
-        <section id="foundation" className="scroll-mt-[120px]">
+        <section id="foundation" className="scroll-mt-[40px]">
           <KingdomFoundation />
         </section>
 
-        <section id="journey" className="scroll-mt-[120px]">
+        <section id="journey" className="scroll-mt-[40px]">
           <JourneySection />
         </section>
 
-        <section id="ecosystem" className="scroll-mt-[120px]">
+        <section id="ecosystem" className="scroll-mt-[40px]">
           <RoyalEcosystem />
         </section>
 
-        <section id="join" className="scroll-mt-[120px]">
+        <section id="join" className="scroll-mt-[40px]">
           <JoinCTA />
         </section>
       </main>

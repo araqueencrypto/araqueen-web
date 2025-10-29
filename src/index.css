@@ -63,7 +63,7 @@ html { scroll-behavior: smooth; }
   animation: marquee 25s linear infinite, shimmer 6s linear infinite;
   background: linear-gradient(90deg, #fff, #ffe6f7, #fff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
 }
 
 @keyframes shimmer {

@@ -31,11 +31,11 @@ export default function KingdomFoundation() {
   ];
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#10002b] via-[#2a0046] to-[#000] text-white overflow-hidden">
-      {/* Royal glow background */}
+    <main className="relative min-h-screen bg-gradient-to-b from-white via-pink-50 to-yellow-50 text-gray-800 overflow-hidden">
+      {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-[300px] h-[300px] bg-fuchsia-600/30 blur-[180px] rounded-full"></div>
-        <div className="absolute bottom-0 right-1/4 w-[250px] h-[250px] bg-yellow-400/20 blur-[180px] rounded-full"></div>
+        <div className="absolute top-0 left-1/3 w-[260px] h-[260px] bg-pink-300/20 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-0 right-1/3 w-[220px] h-[220px] bg-yellow-200/20 blur-[100px] rounded-full"></div>
       </div>
 
       {/* Section: Kingdom Lore */}
@@ -44,30 +44,21 @@ export default function KingdomFoundation() {
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="py-20 px-6 text-center"
+        className="py-16 px-6 text-center"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-yellow-400 mb-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
           The Birth of the AraQueen Kingdom
         </h1>
-        <p className="text-gray-300 max-w-2xl mx-auto mb-10">
+        <p className="text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
           AraQueen transforms meme culture into a real-world economic kingdom — 
           funding agriculture, energy, and technology to return value to its citizens.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            {
-              title: "Vision",
-              desc: "A meme token that funds reality and builds sustainable projects.",
-            },
-            {
-              title: "Mission",
-              desc: "Create profit loops returning to the ecosystem via buybacks, burns, and treasury.",
-            },
-            {
-              title: "Values",
-              desc: "Transparency, community, sustainability, and fun.",
-            },
+            { title: "Vision", desc: "A meme token that funds reality and builds sustainable projects." },
+            { title: "Mission", desc: "Create profit loops returning to the ecosystem via buybacks, burns, and treasury." },
+            { title: "Values", desc: "Transparency, community, sustainability, and fun." },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -75,12 +66,10 @@ export default function KingdomFoundation() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/10 border border-yellow-400/20 rounded-2xl p-6 shadow-lg backdrop-blur-sm hover:shadow-yellow-400/20 transition-all"
+              className="bg-white/80 border border-pink-100 rounded-2xl p-6 shadow-sm backdrop-blur-sm hover:shadow-md hover:shadow-pink-200/40 transition-all"
             >
-              <h3 className="text-xl font-semibold text-yellow-300 mb-1">
-                {item.title}
-              </h3>
-              <p className="text-sm text-gray-300">{item.desc}</p>
+              <h3 className="text-xl font-semibold text-pink-600 mb-1">{item.title}</h3>
+              <p className="text-sm text-gray-600">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -92,12 +81,12 @@ export default function KingdomFoundation() {
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="relative py-28 px-6 text-center"
+        className="relative py-14 mt-4 px-6 text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">
+        <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
           The Royal Classes of AraQueen 👑
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-10 text-sm md:text-base">
+        <p className="text-gray-600 max-w-3xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
           Each class holds a sacred duty within the AraQueen Kingdom. Together, they uphold 
           the balance between meme spirit, innovation, and the real-world economy.
         </p>
@@ -106,37 +95,35 @@ export default function KingdomFoundation() {
           {classes.map((item, i) => (
             <motion.div
               key={i}
-              className="relative bg-gradient-to-br from-[#2a0055]/80 to-[#1b003a]/80 backdrop-blur-xl rounded-2xl p-6 border border-yellow-200/20 shadow-lg"
+              className="relative bg-white/90 backdrop-blur-sm border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:shadow-pink-200/40 transition-all"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.03 }}
             >
-              <div className="relative">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-32 h-32 mx-auto object-contain mb-4 drop-shadow-[0_0_20px_rgba(255,200,240,0.4)]"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-yellow-300 mb-2">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-28 h-28 mx-auto object-contain mb-4 drop-shadow-[0_0_15px_rgba(255,200,200,0.2)]"
+              />
+              <h3 className="text-lg font-semibold text-pink-600 mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-300 text-sm">{item.desc}</p>
+              <p className="text-gray-600 text-sm">{item.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* subtle fog animation at bottom */}
-        <motion.div
-          className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-purple-900/60 to-transparent"
-          animate={{ opacity: [0.3, 0.7, 0.3] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
+        {/* Divider for smooth transition */}
+        <div className="mt-16 w-48 h-1 bg-gradient-to-r from-pink-400 to-yellow-400 mx-auto rounded-full"></div>
+        <p className="text-gray-500 mt-4 italic">
+          “Where every role strengthens the Queen’s realm.”
+        </p>
       </motion.section>
 
-      
+      {/* Bottom soft transition gradient */}
+      <div className="absolute bottom-50 left-50 right-50 h-32 bg-gradient-to-b from-transparent via-pink-100 to-pink-200/40 pointer-events-none"></div>
     </main>
   );
 }

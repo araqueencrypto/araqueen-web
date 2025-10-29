@@ -24,7 +24,7 @@ export default function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative min-h-screen overflow-hidden flex items-center justify-center md:justify-start pt-[120px] md:pt-[140px]"
+      className="relative min-h-screen overflow-hidden flex items-center justify-center md:justify-start pt-[80px] md:pt-[100px]"
     >
       {/* Background */}
       {!isMobile ? (
@@ -53,8 +53,8 @@ export default function HeroSection() {
         className={`relative z-20 flex flex-col ${
           isMobile
             ? "items-center text-center -mt-20"
-            : "items-start text-left ml-[5%]"
-        } justify-center max-w-6xl mx-auto px-6`}
+            : "items-start text-left ml-[1%]"
+        } justify-center max-w-6xl mx-auto px-3`}
       >
         {/* Judul dengan efek bersinar */}
         <motion.div

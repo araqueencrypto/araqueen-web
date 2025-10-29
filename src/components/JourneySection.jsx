@@ -80,12 +80,11 @@ export default function JourneySection() {
     <section
       id="journey"
       className="min-h-screen py-20 bg-gradient-to-b from-white via-pink-50 to-yellow-50 flex flex-col items-center text-center relative overflow-hidden"
+      
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,200,255,0.15),_transparent_70%)]"></div>
-
+      
       <div className="max-w-6xl mx-auto px-6 z-10">
-        <h2 className="text-4xl font-bold mb -1 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
+        <h2 className="text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
           The Royal Market
         </h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -151,7 +150,6 @@ export default function JourneySection() {
                   <Label value="Time" position="insideBottom" offset={-5} />
                 </XAxis>
                 <YAxis tick={{ fill: "#888", fontSize: 10 }} stroke="#fbcfe8" domain={["auto", "auto"]}>
-                  <Label value="Price (USD)" angle={-90} position="insideLeft" offset={-5} />
                 </YAxis>
                 <Tooltip
                   contentStyle={{
@@ -199,7 +197,7 @@ export default function JourneySection() {
                   <Label value="Time" position="insideBottom" offset={-5} />
                 </XAxis>
                 <YAxis tick={{ fill: "#888", fontSize: 10 }} stroke="#fde68a" domain={["auto", "auto"]}>
-                  <Label value="Price (USD)" angle={-90} position="insideLeft" offset={-5} />
+
                 </YAxis>
                 <Tooltip
                   contentStyle={{

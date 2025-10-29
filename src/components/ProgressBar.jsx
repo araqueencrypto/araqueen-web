@@ -86,9 +86,9 @@ export default function ProgressBar() {
       </div>
 
       {/* 🔹 Teks di bawah progress bar */}
-      <p className="mt-2 text-sm md:text-base text-white-700 font-medium">
+      <p className="mt-2 text-sm md:text-base text-pink-700 font-medium">
         Reward collected to build the kingdom:{" "}
-        <span className="text-pink-600 font-semibold">
+        <span className="text-pink-600 font-bold">
           {progress.toFixed(1)}%
         </span>
       </p>
