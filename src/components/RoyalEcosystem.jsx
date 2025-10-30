@@ -153,13 +153,13 @@ export default function RoyalEcosystem() {
       </motion.section>
 
       {/* Divider for smooth transition */}
-      <div className="mt-16 w-48 h-1 bg-gradient-to-r from-pink-400 to-yellow-400 mx-auto rounded-full"></div>
-      <p className="text-gray-500 mt-4 italic text-center">
+       <div className="mt-16 w-48 h-1 bg-gradient-to-r from-pink-400 to-yellow-400 mx-auto rounded-full"></div>
+        <p className="text-gray-500 mt-4 italic">
         “Sustainability is the crown jewel of AraQueen.” 👑
       </p>
 
-      {/* Bottom soft fade for JoinCTA transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-pink-100 to-pink-200/40 pointer-events-none"></div>
+      {/* Bottom soft transition gradient */}
+      <div className="absolute bottom-50 left-50 right-50 h-32 bg-gradient-to-b from-transparent via-pink-100 to-pink-200/40 pointer-events-none"></div>
     </main>
   );
 }

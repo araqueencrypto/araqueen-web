@@ -46,7 +46,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={handleLaunchClick}
-            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-4 py-1.5 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
+            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-2 py-1 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
           >
             Launch App
           </button>
@@ -54,7 +54,7 @@ export default function Navbar() {
 
         {/* MOBILE MENU ICON */}
         <button
-          className="md:hidden p-2 text-white hover:text-yellow-300 transition"
+          className="bg-clip-text bg-gradient-to-r black"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
