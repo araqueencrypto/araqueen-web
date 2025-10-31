@@ -1,9 +1,9 @@
 import RunningText from "./components/RunningText";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import KingdomFoundation from "./components/KingdomFoundation";
+import RoyalFoundation from "./components/RoyalFoundation";
 import JourneySection from "./components/JourneySection";
-import RoyalEcosystem from "./components/RoyalEcosystem";
+import NFTSection from "./components/NFTSection";
 import JoinCTA from "./components/JoinCTA";
 import Footer from "./components/Footer";
 
@@ -24,16 +24,16 @@ export default function App() {
           <HeroSection />
         </section>
 
-        <section id="foundation" className="scroll-mt-[40px]">
-          <KingdomFoundation />
+        <section id="royal-foundation" className="scroll-mt-[40px]">
+          <RoyalFoundation />
         </section>
 
         <section id="journey" className="scroll-mt-[40px]">
           <JourneySection />
         </section>
 
-        <section id="ecosystem" className="scroll-mt-[40px]">
-          <RoyalEcosystem />
+        <section id="nfts" className="scroll-mt-[40px]">
+          <NFTSection />
         </section>
 
         <section id="join" className="scroll-mt-[40px]">

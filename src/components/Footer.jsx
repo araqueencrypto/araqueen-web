@@ -17,18 +17,7 @@ export default function Footer() {
         <div>
           <h5 className="text-lg font-semibold text-pink-600 mb-3">Navigation</h5>
           <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#hero" className="hover:text-pink-500 transition">Home</a>
-            </li>
-            <li>
-              <a href="#journey" className="hover:text-pink-500 transition">Market</a>
-            </li>
-            <li>
-              <a href="#about" className="hover:text-pink-500 transition">About</a>
-            </li>
-            <li>
-              <a href="#roadmap" className="hover:text-pink-500 transition">Roadmap</a>
-            </li>
+           
             <li>
               <a href="https://drive.google.com/file/d/1-ctfdkHzcajUvy9IPueCkOYop7N7nqSh/view" 
               target="_blank"
@@ -94,16 +83,7 @@ export default function Footer() {
                 Pump.fun
               </a>
             </li>
-            <li>
-              <a
-                href="https://boop.fun/tokens/LX9Sqe3wMdSUU8h5555m3kc9tupwzs4prF2HGAfboop"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-500 transition"
-              >
-                Boop.fun
-              </a>
-            </li>
+           
           </ul>
         </div>
 
@@ -113,7 +93,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a href="mailto:info@araqueen.com" className="hover:text-pink-500 transition">
-                Email to : araqueencrypto@gmail.com
+                Mail : araqueencrypto@gmail.com
               </a>
             </li>
             <li>

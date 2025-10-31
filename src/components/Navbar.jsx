@@ -4,11 +4,12 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // 🔹 Perbarui daftar menu agar sesuai dengan struktur terbaru
   const menuItems = [
     { name: "Home", href: "#hero" },
-    { name: "Kingdom", href: "#foundation" },
-    { name: "Journey", href: "#journey" },
-    { name: "Ecosystem", href: "#ecosystem" },
+    { name: "Royal Foundation", href: "#royal-foundation" }, // 🔸 Update ID baru
+    { name: "Market", href: "#journey" },
+    { name: "NFTs", href: "#nfts" },
     { name: "Join", href: "#join" },
   ];
 
@@ -46,7 +47,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={handleLaunchClick}
-            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-2 py-1 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
+            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-3 py-1.5 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
           >
             Launch App
           </button>
@@ -54,7 +55,7 @@ export default function Navbar() {
 
         {/* MOBILE MENU ICON */}
         <button
-          className="bg-clip-text bg-gradient-to-r black"
+          className="text-black hover:text-pink-300 transition-all"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}

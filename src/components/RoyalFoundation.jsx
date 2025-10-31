@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function KingdomFoundation() {
+export default function RoyalFoundation() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -30,6 +30,30 @@ export default function KingdomFoundation() {
     },
   ];
 
+  const ecosystemData = [
+    {
+      title: "Economic Loop",
+      image: "/economic-loop.png",
+      border: "border-pink-200",
+      glow: "bg-pink-200/25",
+      desc: "The continuous value cycle — investment, profit, buyback, and rewards — all return to strengthen AraQueen’s treasury.",
+    },
+    {
+      title: "Real-Economy Flow",
+      image: "/real economy.png",
+      border: "border-yellow-200",
+      glow: "bg-yellow-200/30",
+      desc: "Real-world investments in agriculture, energy, and technology fuel AraQueen’s sustainability and stability.",
+    },
+    {
+      title: "Structured Ecosystem",
+      image: "/structured ecosystem.png",
+      border: "border-pink-200",
+      glow: "bg-pink-100/40",
+      desc: "A bonding-curve-based economy ensures long-term growth, fair rewards, and a self-sustaining royal kingdom.",
+    },
+  ];
+
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-white via-pink-50 to-yellow-50 text-gray-800 overflow-hidden">
       {/* Background Glow */}
@@ -38,7 +62,7 @@ export default function KingdomFoundation() {
         <div className="absolute bottom-0 right-1/3 w-[220px] h-[220px] bg-yellow-200/20 blur-[100px] rounded-full"></div>
       </div>
 
-      {/* Section: Kingdom Lore */}
+      {/* 🔹 Section 1: The Birth of the Kingdom */}
       <motion.section
         initial="hidden"
         whileInView="show"
@@ -75,7 +99,7 @@ export default function KingdomFoundation() {
         </div>
       </motion.section>
 
-      {/* Section: Royal Classes */}
+      {/* 🔹 Section 2: Royal Classes */}
       <motion.section
         initial="hidden"
         whileInView="show"
@@ -91,7 +115,6 @@ export default function KingdomFoundation() {
           the balance between meme spirit, innovation, and the real-world economy.
         </p>
 
-        {/* 🔹 Gambar dan Deskripsi Sejajar */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {classes.map((item, i) => (
             <motion.div
@@ -116,15 +139,59 @@ export default function KingdomFoundation() {
             </motion.div>
           ))}
         </div>
+      </motion.section>
+
+      {/* 🔹 Section 3: Royal Ecosystem */}
+      <motion.section
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        className="text-center py-20 px-6"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
+          The Royal Ecosystem of AraQueen
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Discover how AraQueen integrates blockchain innovation with tangible real-world growth through a sustainable, circular economy.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {ecosystemData.map((item, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ scale: 1.03 }}
+              className="flex flex-col items-center text-center bg-white/70 backdrop-blur-md rounded-2xl p-5 border border-pink-100 shadow-inner hover:shadow-pink-200/50 transition-all"
+            >
+              <div className="relative group w-full rounded-xl overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={`mx-auto w-full h-56 object-contain rounded-xl border ${item.border} shadow-md transition-transform duration-500 group-hover:scale-[1.05]`}
+                />
+                <div
+                  className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 ${item.glow} blur-lg transition-all duration-700`}
+                ></div>
+              </div>
+
+              <h3 className="text-lg font-bold text-pink-600 mt-4">{item.title}</h3>
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <p className="mt-10 text-sm text-gray-600 max-w-xl mx-auto">
+          Together, these pillars form the Royal Foundation — the core structure of the AraQueen Kingdom, where vision meets economy.
+        </p>
 
         {/* Divider */}
         <div className="mt-16 w-48 h-1 bg-gradient-to-r from-pink-400 to-yellow-400 mx-auto rounded-full"></div>
         <p className="text-gray-500 mt-4 italic">
-          “Where every role strengthens the Queen’s realm.”
+          “Sustainability is the crown jewel of AraQueen.” 👑
         </p>
       </motion.section>
 
-      {/* Bottom soft transition gradient */}
+      {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-pink-100 to-pink-200/40 pointer-events-none"></div>
     </main>
   );
