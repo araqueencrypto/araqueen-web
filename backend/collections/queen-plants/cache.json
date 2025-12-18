@@ -1,0 +1,108 @@
+{
+  "program": {
+    "candyMachine": "4k9EAVTzEkkb4wnLD2F1RxKFw88osLndsDx26cWAs5Ak",
+    "candyGuard": "",
+    "candyMachineCreator": "HdRBFXF8CLzSFcQco3ALm81bAWP3mYTCFhXbE2Usncdr",
+    "collectionMint": "CrcZieGXaUKAVVDHqbrAgbM7tBeSiaXJhSEE4e8roWmG"
+  },
+  "items": {
+    "0": {
+      "name": "Queen of Plants #0",
+      "image_hash": "9c0e9f75be8b705f650acc3b574d96174604d304e20ce6e0d47bab8b7797e491",
+      "image_link": "https://gateway.irys.xyz/J65VyDEoSsRLwoaAqxANCE7CfFthyxsqzwjWuaa559fU?ext=png",
+      "metadata_hash": "2defc0ad6de5822fcd22ac48b52b5fa4eb9b1883ccfe72b77201fde441669534",
+      "metadata_link": "https://gateway.irys.xyz/5M1MLxnbCL2Qj7QFGgwiNAuj83bVdJ7qtq5wBVCwoPSM",
+      "onChain": true,
+      "mint_address": "HXCZdvsLBojGqY14yaPr9nTwqZBi6wsgHUrieXPkgJDt"
+    },
+    "1": {
+      "name": "Queen of Plants #1",
+      "image_hash": "d5f6585b447731ba5a78d51ebc95a29a5e70f14965c34b6498f90485ced4faea",
+      "image_link": "https://gateway.irys.xyz/DkLUhr1GMZa1RLquS2YiWV33AjxvS7EbHJL3chvdGv2B?ext=png",
+      "metadata_hash": "747b35ed103388236ec16715ec51f21cb73976761ab6080ad9ae0576e1e4427f",
+      "metadata_link": "https://gateway.irys.xyz/5KbyiTpacGKbm7LfgDyceiTuBSUvTreNjD5SEXzPrXpB",
+      "onChain": true,
+      "mint_address": "4JvyquBY6W7Gbj5ER1bsToM9XLCDVccMMkeyupo79AMY"
+    },
+    "2": {
+      "name": "Queen of Plants #2",
+      "image_hash": "5df341d54fc1cefa9260c0f3238ba89bfef0ec66752c4c1130b7ee74e615b237",
+      "image_link": "https://gateway.irys.xyz/2CqQCuV6HkRJ9yMA86vo9Y3r2LXSac832tgkZNiFZ6Dm?ext=png",
+      "metadata_hash": "7633c580d92661aa7d1d1e2aafe5ce2c0c60d673ed33548bbe935abfb18f2180",
+      "metadata_link": "https://gateway.irys.xyz/7wEu3uuXzkHTS3132YgD1CQTWwrSzirhdsjxQgoSaidT",
+      "onChain": true,
+      "mint_address": "BziBcQhQ98z2gkWpyg8gFWfEm8q2gTCc6PfCqsgthYgF"
+    },
+    "3": {
+      "name": "Queen of Plants #3",
+      "image_hash": "d214eec4eb4caae6821b2acdad4a95f32273f61acd72322c9b9135f94c0f1285",
+      "image_link": "https://gateway.irys.xyz/ExY29kyoJgZdqDJjY3sFPcWyBiH84MDYDnzB19NH4mkw?ext=png",
+      "metadata_hash": "140dc963048267404dfb98cc71b6793a7b492f53aa7a99d0251465227bc57950",
+      "metadata_link": "https://gateway.irys.xyz/AcoDikiFSKCfCwUjfyLPUUjHD6ZUGV1jcADcjp9CqWXq",
+      "onChain": true,
+      "mint_address": "4PDe5MvZbNCTHenUGULKFZHrCEHiLZ8rYNHwDn4k4yqk"
+    },
+    "4": {
+      "name": "Queen of Plants #4",
+      "image_hash": "b3973fff6f485306eb23fb24a8fef9fcfadcb01693cfed12a218d30ee70d0207",
+      "image_link": "https://gateway.irys.xyz/Eu1MQXFcEznzHd5gsHyBethu3JDrdjkrprdrsAGBbq5g?ext=png",
+      "metadata_hash": "622cd8935a2f6f9ea9e7b7deca7d01a930f96f61090e65ce73be78671e2c5a11",
+      "metadata_link": "https://gateway.irys.xyz/5DdmLscVkjnF78Bet51Hw5QwKghKiAqz3Lj3tRkfQPLZ",
+      "onChain": true,
+      "mint_address": "AJ2TwaADKNSXGkGzndLf5xpevj4zBTGtJshsRiioagkw"
+    },
+    "5": {
+      "name": "Queen of Plants #5",
+      "image_hash": "6a5dcc055b5c9f5818cc1fe0ec3da25df86ef28600d41df2ceb8dc148949d9e5",
+      "image_link": "https://gateway.irys.xyz/3jZUBhUsPhGWPbucYFCQxrTNzS43FaXZqRVsP8xMo2pP?ext=png",
+      "metadata_hash": "f50fc72cc2d4ea9a45107c69a855330bb49debf19f0f9b57754f911dbb495944",
+      "metadata_link": "https://gateway.irys.xyz/DxYvqKwg3qXQVKAXAcEsfrfsq9pZPiT5nPb3HqvmoCWV",
+      "onChain": true,
+      "mint_address": "DgJgbfrWWd1Lb6XZxaB2cUn3qhxeiW3Pb6sJcusmM6ip"
+    },
+    "6": {
+      "name": "Queen of Plants #6",
+      "image_hash": "12edf11df9b9b6846ffd2aba2e65c031a1b35c9a8a56d8a8958de5e19cdbde87",
+      "image_link": "https://gateway.irys.xyz/6XmnQ5mBJvHEHs5RRdRMzBB84XYHtbz2ygQuQeWFWY2f?ext=png",
+      "metadata_hash": "47d75842c9133b4e6c77e25ceca5243a1a13276f9e01f84fd12b9fee388600cb",
+      "metadata_link": "https://gateway.irys.xyz/82FeQCH8zZe39db5NfLUdgFDZhsHFUS1vbAH7oYTgDHN",
+      "onChain": true,
+      "mint_address": "FjV4jFnxML6E6BYeen4cCsCZMVkGtiASGa2rRfxbH6Ne"
+    },
+    "7": {
+      "name": "Queen of Plants #7",
+      "image_hash": "f5eabbaf1eea585e8bd682971d06341d0b865b2df2eb361ae2c6e972d8fcf83f",
+      "image_link": "https://gateway.irys.xyz/3xhpj8zsXnqYWBFCBoMEu6XAb2vLujJ5PZa5gyrLC4HF?ext=png",
+      "metadata_hash": "fc66aa7838815a968413603d825f1aa040ac5213310973f8357f6db188d2ce0f",
+      "metadata_link": "https://gateway.irys.xyz/GpT2THgtApwUyjsWNHzmKhBeZAEsJL9LvqD25q58itW1",
+      "onChain": true,
+      "mint_address": "AFMEBuGTAvbuFBnoXSU7Y2YqHMR3ksSJyYpd7fhCncPS"
+    },
+    "8": {
+      "name": "Queen of Plants #8",
+      "image_hash": "a1eccc67556d28bb01d86c8cb35ca3fefa12d3fe6ebc894a38aa7d70e2fd3a22",
+      "image_link": "https://gateway.irys.xyz/2PCgncyFpL3c4jGgZ7NPnhD2uiPafb8fyXpmGFbSbATJ?ext=png",
+      "metadata_hash": "6dbac9f792e44394619c1f3f05ff4e5d3a200b031a75c3e0b4a8ae9ee01e73c6",
+      "metadata_link": "https://gateway.irys.xyz/AiG2HG7fzc4dhyUkSw7aCZvgf1tmWwVCMQfjmFes98zP",
+      "onChain": true,
+      "mint_address": "3dcfQ1xNHtFpuqKymvct1JyfpWGF7XfwCJKwkS491irr"
+    },
+    "9": {
+      "name": "Queen of Plants #9",
+      "image_hash": "f9030585a3db8e36bfca4f769c3a180ee1b075a8e1e7a750e472bef6538a2bc6",
+      "image_link": "https://gateway.irys.xyz/FDdq36RJHiVGFoPhmxsmyDqV92dBtYcLAWKuUbAYBZNw?ext=png",
+      "metadata_hash": "ad7e3dcd1d7c679dc0fc2cfbf7227fd319e4ab70e7df26d2f8dd429f7ed722ba",
+      "metadata_link": "https://gateway.irys.xyz/7bJ6oHhsTK7nEaMFeJfYGCGocGEMiYqUi1kBRMpM94TJ",
+      "onChain": true,
+      "mint_address": "Bvzg4EacHwpCpKTzedg8Gcm5G7W43sLUpmyVU83yXL3f"
+    },
+    "-1": {
+      "name": "Queen of Plants",
+      "image_hash": "0c19d5f081794d13e80ddabe579623903c0618a3397e534ecd3bd69b60fb15d2",
+      "image_link": "https://gateway.irys.xyz/9DxK6LYEarLcYbuPPDADt7v75VDQa2DipHE4W5t7wW5j?ext=png",
+      "metadata_hash": "42c55208230814161a5006d43cb91ceab5b367e99f84d4a57a4a32e5cc4cf655",
+      "metadata_link": "https://gateway.irys.xyz/5SsPuTYo3UTSQvCVv2wn2BFvSMULPY1okHPXVTKHW5Tb",
+      "onChain": true
+    }
+  }
+}

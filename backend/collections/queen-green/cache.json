@@ -1,0 +1,36 @@
+{
+  "program": {
+    "candyMachine": "4XfQuKfAQ6xAtUUHXk7Pszm3WsUUPU5ZH1YHsEbQXUt3",
+    "candyGuard": "",
+    "candyMachineCreator": "HL96w86eh6eZUVSJqg6uchbSFdwEzgFbpMW6hDiawszA",
+    "collectionMint": "A5NnNnNyBWACHXLQbZbcWXznPDP8cxAB2xjL3SktuEJQ"
+  },
+  "items": {
+    "0": {
+      "name": "Queen of Green #0",
+      "image_hash": "000549d6b83227b1dc17fd80caed31f134fa322940bdabe71848c255e519f10a",
+      "image_link": "https://gateway.irys.xyz/FKGJ438EHBgQLfw2GCXrYYGrT71oLhexctH7Kix5W4gY?ext=png",
+      "metadata_hash": "3fbc2b40a8c69e1a29328b30a84107a89c416550e3d9640464d0e9b2f0f4c05d",
+      "metadata_link": "https://gateway.irys.xyz/53RunLi9bi5E8GoMKe3rfXTtcAjL3Es9c39jJszcda1p",
+      "onChain": true,
+      "mint_address": "GfB9sm1bu824awMXAqSuG6UW5cFJMSj9VdRpmVeJd8bG"
+    },
+    "1": {
+      "name": "Queen of Green #1",
+      "image_hash": "f5ab8a3b4a6b0be40b817112d04c21c21d1c6715f53b7a03eaa512e9f8036122",
+      "image_link": "https://gateway.irys.xyz/HohzaEiSzZkdM8eHVTW7fW577j7rW8eeFsjjJmVk8E4P?ext=png",
+      "metadata_hash": "87b52b3914267434c838c684fcfad5a8b0c24ebe1640921ec863519adb25b72c",
+      "metadata_link": "https://gateway.irys.xyz/9a6g9Aodur3N7VNa4hgzxf19wAiWyuKaRgi7QX2xyDP",
+      "onChain": true,
+      "mint_address": "Bw4zXkoAvJo4zdrwHGJtMUx28jE6ZBfbQ86hErqd31TR"
+    },
+    "-1": {
+      "name": "Queen of green",
+      "image_hash": "f5ab8a3b4a6b0be40b817112d04c21c21d1c6715f53b7a03eaa512e9f8036122",
+      "image_link": "https://gateway.irys.xyz/J5H3ZVeCWPYP8jVBqWG7YmS3zqJRawjdx2P2wAiyPpib?ext=png",
+      "metadata_hash": "6304bce4790e935706c27183a7853a76de83225946c05a05d0a8cef1ebe3bea7",
+      "metadata_link": "https://gateway.irys.xyz/4Kw61ebAbq8Dz22DwV9h18dMZWVuCVhQnhUNhBavpRbC",
+      "onChain": true
+    }
+  }
+}

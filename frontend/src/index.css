@@ -1,0 +1,254 @@
+/* ============================================================
+   BASE TAILWIND
+============================================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   THEME VARIABLE — LIGHT & DARK
+============================================================ */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --card-bg: rgba(255,255,255,0.85);
+  --glass-bg: rgba(255,255,255,0.55);
+  --brand-a: #ff4fa2;
+  --brand-b: #b44bff;
+  --brand-c: #5bb6ff;
+}
+
+.dark {
+  --bg: #0b0b0c;
+  --fg: #e8e8e8;
+  --card-bg: rgba(20,20,20,0.85);
+  --glass-bg: rgba(22,22,22,0.55);
+  --brand-a: #ff4fa2;
+  --brand-b: #b44bff;
+  --brand-c: #5bb6ff;
+}
+
+html, body {
+  @apply antialiased;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+/* ============================================================
+   BRAND GRADIENT SYSTEM (ARAQUEEN AURA)
+============================================================ */
+.grad-aura {
+  background: linear-gradient(135deg, var(--brand-a), var(--brand-b), var(--brand-c));
+}
+
+.grad-aura-text {
+  background: linear-gradient(135deg, var(--brand-a), var(--brand-b), var(--brand-c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grad-aura-border {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    linear-gradient(135deg, var(--brand-a), var(--brand-b), var(--brand-c)) border-box;
+  border-radius: 16px;
+}
+
+
+/* ============================================================
+   ADVANCED SHADOW SYSTEM
+============================================================ */
+.shadow-1 {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.shadow-2xl {
+  box-shadow: 0 12px 45px rgba(0,0,0,0.22);
+}
+
+.shadow-focus {
+  box-shadow: 0 0 0 4px rgba(255,79,162,0.25);
+}
+
+.shadow-pulse {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%   { box-shadow: 0 0 0 0 rgba(255,79,162,0.30); }
+  50%  { box-shadow: 0 0 0 10px rgba(255,79,162,0.05); }
+  100% { box-shadow: 0 0 0 0 rgba(255,79,162,0.30); }
+}
+
+
+/* ============================================================
+   GLASSMORPHISM (V3)
+============================================================ */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+
+.glass-heavy {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(22px) saturate(180%);
+}
+
+
+/* ============================================================
+   NFT HOLO EFFECTS
+============================================================ */
+
+/* Glow ring */
+.nft-glow-ring {
+  box-shadow: 0 0 25px rgba(255,79,162,0.45), 
+              0 0 55px rgba(180,75,255,0.25);
+  transition: 0.25s ease;
+}
+
+.nft-glow-ring:hover {
+  box-shadow: 0 0 45px rgba(255,79,162,0.55),
+              0 0 90px rgba(91,182,255,0.35);
+}
+
+/* Hologram sweep */
+.nft-holo {
+  position: relative;
+  overflow: hidden;
+}
+
+.nft-holo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+    transparent,
+    rgba(255,255,255,0.65),
+    transparent);
+  transform: skewX(-20deg);
+}
+
+.nft-holo:hover::after {
+  animation: holoSweep 0.8s ease;
+}
+
+@keyframes holoSweep {
+  from { left: -130%; }
+  to   { left: 140%; }
+}
+
+
+/* ============================================================
+   MICRO INTERACTIONS (3D CARD + PRESS ETC)
+============================================================ */
+.tilt-3d {
+  transition: transform 0.25s ease;
+}
+
+.tilt-3d:hover {
+  transform: rotate3d(1,1,0,6deg) scale(1.04);
+}
+
+.soft-press:active {
+  transform: scale(0.95);
+}
+
+.tap-bounce:active {
+  animation: tapBounce 0.30s ease;
+}
+
+@keyframes tapBounce {
+  0%   { transform: scale(0.98); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+/* ============================================================
+   ANIMATIONS — V3 MOTION PACK
+============================================================ */
+
+/* slide left */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-left { animation: slideLeft 0.5s ease-out; }
+
+/* slide right */
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-right { animation: slideRight 0.5s ease-out; }
+
+/* slide up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-up { animation: slideUp 0.55s ease-out; }
+
+/* slide down */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-down { animation: slideDown 0.55s ease-out; }
+
+/* blurFade */
+@keyframes blurFade {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+.blur-fade { animation: blurFade 0.6s ease-out; }
+
+/* scalePop */
+@keyframes scalePop {
+  0%   { opacity: 0; transform: scale(0.7); }
+  60%  { opacity: 1; transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.scale-pop { animation: scalePop 0.45s ease-out; }
+
+/* stagger for grids */
+.fade-stagger > * {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+.fade-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.fade-stagger > *:nth-child(2) { animation-delay: 0.10s; }
+.fade-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.fade-stagger > *:nth-child(4) { animation-delay: 0.20s; }
+.fade-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+
+/* ============================================================
+   CUSTOM SCROLLBAR (PREMIUM V3)
+============================================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--brand-a), var(--brand-c));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+}
+
+/* hide if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}

@@ -1,0 +1,117 @@
+{
+  "program": {
+    "candyMachine": "82MeSC9o6CciwModFnTU5PqpEd7QaQhnxBLNJTVXAcCb",
+    "candyGuard": "",
+    "candyMachineCreator": "FzK5fdZxWZmZSayTZe3TXFypQosA15z9LuuqJhjutmP4",
+    "collectionMint": "8bbr9TBah3V4K5oW8cG8qYNBgw6upX6rzqcNvn6k8hhm"
+  },
+  "items": {
+    "0": {
+      "name": "Queen of Colors #0",
+      "image_hash": "9fc87367f931d28f876e64987d2c9ab4dab23d9a7e07ebbe8ac79b0dc2a7b184",
+      "image_link": "https://gateway.irys.xyz/AiX5Fe4TZDNRiEq5kC66hc2GyGVT2EZXDPETVmuSGCHR?ext=jpg",
+      "metadata_hash": "b175a2e22a3dab4980c5db03988626170b7c5765a43e97c1f22a59a014295940",
+      "metadata_link": "https://gateway.irys.xyz/3LYMpUsMxR4Z1mWPP4ProJb6w1po7ZYx7LFJ1FgkDzyW",
+      "onChain": true,
+      "mint_address": "3kavT97E1zqUyRUu8qz3zQoyGdK5M9G8kKUeBru8SdEy"
+    },
+    "1": {
+      "name": "Queen of Colors #1",
+      "image_hash": "6ada83728ff113b6f4342e6a4314af0b8d50e31b2b7b687f2bc12d4481cc7148",
+      "image_link": "https://gateway.irys.xyz/2PFewXpBjZ3HG967XCyaEJ85anRiv6w8aJt4ByWoDdpK?ext=jpg",
+      "metadata_hash": "38543ee269cac263e415fe42ca1348986fcb56da2bbafde2c3131a9a70ad24f0",
+      "metadata_link": "https://gateway.irys.xyz/E51smjU9KXn7HPxXRngmyJysWZbc5ErBqAZanqN6nmab",
+      "onChain": true,
+      "mint_address": "5v22fwW4b9e4HiX5BsMT7uGJ4RUHoNXE1e2KKQniZQ6U"
+    },
+    "2": {
+      "name": "Queen of Colors #2",
+      "image_hash": "f765908268152dc792da5f4745bb86b41b51dc1748899129bcf9c993f0c12fae",
+      "image_link": "https://gateway.irys.xyz/EXtP5wRdeCRgjtpUiAPgy8yciT36JMoyyf3TYwdxZoqS?ext=jpg",
+      "metadata_hash": "c9c72e7269f97dbf67e700ccf649b26e11fe2b8dd568fe042e3eff2b95349b9f",
+      "metadata_link": "https://gateway.irys.xyz/BaJ9HM1KDGBfieuChAzoZxVw4fJayMaErAAwGWr5aC9i",
+      "onChain": true,
+      "mint_address": "QpCPN8RGnP4EugkUY33gK5t71g8RR7tmdC7zrhLZryj"
+    },
+    "3": {
+      "name": "Queen of Colors #3",
+      "image_hash": "d291624a877dfbd17b70fa9f5562743abe5bc1868b14affb026fca3a0560c635",
+      "image_link": "https://gateway.irys.xyz/5qveiQPsg6TXwHQ8teJ6MTuiR7rWBt1ACnJdKVh8xTEk?ext=jpg",
+      "metadata_hash": "b605e6095b622d5d8b4a06f334b6dc5f58336db97ef31224ea3e3c1735e9d4ad",
+      "metadata_link": "https://gateway.irys.xyz/FXGiG4RnEQg5NNhnLf51rkPDMEsdLW3iTEbicxHnEUnq",
+      "onChain": true,
+      "mint_address": "7NAufu6CLaFjCaz9KN1eSKPr97vyzc324TfbJZGSFxFa"
+    },
+    "4": {
+      "name": "Queen of Colors #4",
+      "image_hash": "035f2455f92335beaad31c2b4f9bed6a2e63bb5e72b4bf2e83ca51043b0df21d",
+      "image_link": "https://gateway.irys.xyz/J4bbS1iN7qV7edBqjkzqczPG8y16a4czhjbGqqRMLqEF?ext=jpg",
+      "metadata_hash": "713f3121b8c8198680c594ea69cfa10ebdbcbb9834b1cb49b3e799e75f39c83d",
+      "metadata_link": "https://gateway.irys.xyz/ET5WaSMtm5TF7Rgavnaqyg4yvNCgbfu7kD7uHsB7jUtR",
+      "onChain": true,
+      "mint_address": "2i9n9AYX5TRtyzWRnA5ugynxHTmbeFeCxz1srijeaKEM"
+    },
+    "5": {
+      "name": "Queen of Colors #5",
+      "image_hash": "27784ceb1322bc63ec27326f5750a5e4651b1b945faf2fcfd24d676fdfb0887c",
+      "image_link": "https://gateway.irys.xyz/8QXcyCsQz59rNGGZR8zjxkDcvJJLPVVHTVmsCXmQJRSP?ext=jpg",
+      "metadata_hash": "8915f969deebc85ebb6731ffeb25c4d23a9fcc72a104fa6f5b8a0eca4d7c707b",
+      "metadata_link": "https://gateway.irys.xyz/F8q3JvUBmFaeY4jF9JdcurpwGRwtwX7Vt72rcirzYu9Z",
+      "onChain": true,
+      "mint_address": "9rNGxUC4vm7KAMq2z1tAbQTdfiKKKZZ5BxVHbJ4Axhin"
+    },
+    "6": {
+      "name": "Queen of Colors #6",
+      "image_hash": "6ada83728ff113b6f4342e6a4314af0b8d50e31b2b7b687f2bc12d4481cc7148",
+      "image_link": "https://gateway.irys.xyz/HygMES7YM9o1SDHwLH5ukPzhV8eGKbtXp1nsRpacYWu4?ext=jpg",
+      "metadata_hash": "baf09cc09a990615474d071329af1edae6b425743722cea492984ff789af4482",
+      "metadata_link": "https://gateway.irys.xyz/2V2E9FTdZbwLHV77crmrjF9fK9zQ4JXX9Y5kPogAUBBU",
+      "onChain": true,
+      "mint_address": "CbTyESbykXyFnd7epKiyfEaLRUoh3v31m3nM9WnLPFy3"
+    },
+    "7": {
+      "name": "Queen of Colors #7",
+      "image_hash": "56c31cbcd669b26430e3ecabb52296a00401df364113114c128b1dbc393389cc",
+      "image_link": "https://gateway.irys.xyz/AuQBSGxTwrwE9szM4Yrd7qHArKsXVfGrf1PZRxoT4Yoo?ext=jpg",
+      "metadata_hash": "49795708747a572dd27cbf7bbfadbf852c44536fe3ba314a532166092d18e17e",
+      "metadata_link": "https://gateway.irys.xyz/6xVTFX51v6otriqkd2JEgoybU6GQT2G4N1nNqU6CaTtb",
+      "onChain": true,
+      "mint_address": "zDtNJjknQypdVKvado6njrC28YjjcagziDY5sPyY2Kv"
+    },
+    "8": {
+      "name": "Queen of Colors #8",
+      "image_hash": "702ba293d8035a4407acf76cd2d03f265c7fec31e605cb2513b47f500619020a",
+      "image_link": "https://gateway.irys.xyz/3ANbcAdoR6EG84xFHrV7EdB7PDVMtGcAubgyNToGy5E3?ext=jpg",
+      "metadata_hash": "be5b0b5a0497c31893e658bf5bacfa985c9ba4268fae75ef4b7ac80e7903b44d",
+      "metadata_link": "https://gateway.irys.xyz/CA3WEg6SFutiP9dCi9d5iprj2j3GS2VUtyAqKCyjrx7R",
+      "onChain": true,
+      "mint_address": "58rY8TpGNRw1nT9S46MQ187kqfddymMBnb7FxFAqQtpy"
+    },
+    "9": {
+      "name": "Queen of Colors #9",
+      "image_hash": "35c99044f9cba187ec6207bd91fcea3418525a2b319394e862477c9e1fa0d4f9",
+      "image_link": "https://gateway.irys.xyz/DoWWQvPYAHKHGDabzhTwhaoEfQDVjNndCJzbneytEe8V?ext=jpg",
+      "metadata_hash": "625cb11e16fd991c2e8811bfcb4e7de86865a50782f4e6ec680a415d96ef648c",
+      "metadata_link": "https://gateway.irys.xyz/C9QCdrHEnBAEvNdmzppp7Wgv3daCJFxtcXheCv8XUBsG",
+      "onChain": true,
+      "mint_address": "GZfFbThUiinAR51GUoLE85deXKnSrXWa1FDsrwnSPx24"
+    },
+    "10": {
+      "name": "Queen of Colors #10",
+      "image_hash": "9fc87367f931d28f876e64987d2c9ab4dab23d9a7e07ebbe8ac79b0dc2a7b184",
+      "image_link": "https://gateway.irys.xyz/Fap4BbN59r26BiP84utgTcdY4FTb9MQCLiRm59gPjWc6?ext=jpg",
+      "metadata_hash": "fd96830c0f2de952876c06fb62f14387057c03787ab7e2234f7ce2005753e0ec",
+      "metadata_link": "https://gateway.irys.xyz/3m6FyiEQ4ju9ANfNbrxLwTFkTgotsrvkCCgAXnK9hqFz",
+      "onChain": true,
+      "mint_address": "taUgJL48jT1euYG9JSHQXLuwqWLG91new58uRCRgjyh"
+    },
+    "-1": {
+      "name": "Queen of Colors",
+      "image_hash": "294cbbdb98321bcb6f95f332c94faed35e27f3812878434f6d9b0b6f5374f7b6",
+      "image_link": "https://gateway.irys.xyz/69Pyj4ep8QuCQpBSpMCk4T3HKeQc8rtP1T8WsTtZ1B1E?ext=jpg",
+      "metadata_hash": "dad3d53eaaf77f0056fcccdfa18ed4723d9c3a2c112bfc9f24b9bfacbc1c72d9",
+      "metadata_link": "https://gateway.irys.xyz/6Q3GLEKZNivgPfBUYGJR7cpXyQFDsUwcLo7rJGysKEYv",
+      "onChain": true
+    }
+  }
+}

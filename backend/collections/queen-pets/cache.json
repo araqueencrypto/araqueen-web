@@ -1,0 +1,117 @@
+{
+  "program": {
+    "candyMachine": "8LdTmiJ24HhJUDzJ2mCYbPKG2nCcdrLcV8EwvPVeNmQW",
+    "candyGuard": "",
+    "candyMachineCreator": "2P5nEhPa4BayMpKrjfJBG6WUUfoQ6WFKXUThBd2jmzZy",
+    "collectionMint": "BFphMraP5BCithBhRZzfzcY6FyNotqmL7hnFTqr8YVNv"
+  },
+  "items": {
+    "0": {
+      "name": "Queen of Pets #0",
+      "image_hash": "5b67de0aff02c5c20dfdce3a153293b9399dff9e28108b083aa24d4249bb3e3f",
+      "image_link": "https://gateway.irys.xyz/CaD5sneGAHmDYAmfbhPbdtC9WTAYfq2vU2GXYfCgYFnQ?ext=png",
+      "metadata_hash": "3b03efc7580189a0688c8e4a77c9f9e64542335fe7dc6135267cf7068f99d66c",
+      "metadata_link": "https://gateway.irys.xyz/3LEtqmR8x5iAEvcQCY2pr8oYdKjDMzTzrhPq7vrQ3kkp",
+      "onChain": true,
+      "mint_address": "HiEoTbszHrHcVX85mJSzhN4oKZqahL7q33UFhEvBtcTV"
+    },
+    "1": {
+      "name": "Queen of Pets #1",
+      "image_hash": "29e5ff3a82d3a72f72b3c196caa79cf7e80bc88aa2d5549f2f5752769a94fe70",
+      "image_link": "https://gateway.irys.xyz/87qJNAQmhFkS765Kd6rkzJfVLkv6UTvKKMTtKcK9bVJ3?ext=png",
+      "metadata_hash": "c6acf4d94214520ec9a0db46cd967757538217c4870b5c84cb6ee76926ef3af5",
+      "metadata_link": "https://gateway.irys.xyz/E2DdzNGCL4PXiQ9ohXPZXeF4U582zYCzyS7NXdJ6kppr",
+      "onChain": true,
+      "mint_address": "BzCZRfgAHwZHQcABjcH5UpFLXs1CSHqWRjZrYUWQDZbB"
+    },
+    "2": {
+      "name": "Queen of Pets #2",
+      "image_hash": "b40b7290049f0a8c8379604e23ca935b5c138145c6885bff275a263a3f88b359",
+      "image_link": "https://gateway.irys.xyz/8YDHCh63pQ1mavPqyzBigTCyw893rY9gCP8Kc6KMpyoL?ext=png",
+      "metadata_hash": "800efadcefbd57b9fbbce91da7a5f53a73668847050b74b526934f2ae7dd6b8b",
+      "metadata_link": "https://gateway.irys.xyz/DwdMxEFkqDGgMS3vem8RAvuHjibHgxwsg4C2n1ZJPuPj",
+      "onChain": true,
+      "mint_address": "29v7GAZzj5yJRGKg9EFsZUA7wtQFfumWfkoT8QZQrdpU"
+    },
+    "3": {
+      "name": "Queen of Pets #3",
+      "image_hash": "418d3d17f68f11fb57bcbe76f2eaeb6c183de8103f386ab1ae3b038d00cb3682",
+      "image_link": "https://gateway.irys.xyz/9brRUFibDTt8uusEmd9eHTU3WMismHSpEyZM6K7XsPMy?ext=png",
+      "metadata_hash": "6357cdd9e20df165a672715511d966e0aa724b7a3d4d656c9c4850c9b2f826e4",
+      "metadata_link": "https://gateway.irys.xyz/FQvFxJyHKuCzNpDSdC1rchnU4Jx8JShPw3QZDPE4pLeX",
+      "onChain": true,
+      "mint_address": "7bKa6C6AkbBVwJ1WshRG28cwpkn7RAM26ANV2Lgpy1kJ"
+    },
+    "4": {
+      "name": "Queen of Pets #4",
+      "image_hash": "05b6130737bb4a7bd1273e79364e7a8f2f6923b7b59dcb57014f7cd3448fc725",
+      "image_link": "https://gateway.irys.xyz/C1V61DcmzsqemcCwmSuK649jBeSpshXY26y6PYU7rSUJ?ext=png",
+      "metadata_hash": "7f85a31b765ce9161e0ae6ecaad2a1f2627599570b26e9e0c1acd1df448efea2",
+      "metadata_link": "https://gateway.irys.xyz/HcbdZ6K38gzkpsuuNDwmvfUnsrXnsNJ2oPndB8zeh2QQ",
+      "onChain": true,
+      "mint_address": "6Weuv8KM1BCdy2nsadPmywPwsEatn4zTbDScJ8DqYpMS"
+    },
+    "5": {
+      "name": "Queen of Pets #5",
+      "image_hash": "c1785f71b54e2507502be5c46b497c00490d722548cff7d77d0d89467092b00d",
+      "image_link": "https://gateway.irys.xyz/4vEXkVhkW7bCuhKGN5rok286A6hmx7g1BKFDy45FT2cy?ext=png",
+      "metadata_hash": "5be1d464b8c60245ae7fb174813382312b0fef4f27b449abbfc7a4aad1065c48",
+      "metadata_link": "https://gateway.irys.xyz/CrUi1wJWh7nZhn9JyUxr2dPJu7dtRkipk1txAXmy4d5W",
+      "onChain": true,
+      "mint_address": "8SdRPBmU9NebKqLSiXeGV9cYAnyPixXmpgmwPz3Z9cwa"
+    },
+    "6": {
+      "name": "Queen of Pets #6",
+      "image_hash": "2c4a8323020edbda09f639cad2d1e90e8590775317e59181707681490a850717",
+      "image_link": "https://gateway.irys.xyz/W8U9Wq7eRFho27gy7fYRcWMhvdGXgg52hiN7hms6VRK?ext=png",
+      "metadata_hash": "f29b5430f5bef6ca5ee400494c95753454e1bbc1aec149dbd51778c11dca6321",
+      "metadata_link": "https://gateway.irys.xyz/7BRiSmyXe59EvLHPkR3Cw3EqEBtseVCidsoF2D2FZ9Mi",
+      "onChain": true,
+      "mint_address": "Fz6Pgnso4t3Q2hwWXK6wPhny5YwmWewnTejmE4nX3xY6"
+    },
+    "7": {
+      "name": "Queen of Pets #7",
+      "image_hash": "115fc36506c6192a73f7f8377c531a063cfb8d2fa47b06a10b571cbf71002e23",
+      "image_link": "https://gateway.irys.xyz/4Fr76W1wxjnctGVWhJEtF6Wm5VCgoeS9J9wReg6c3xgX?ext=png",
+      "metadata_hash": "d38b973f71937c0833867d1613ccaf3c520904b4b50729f7b1e6d80318e44eb1",
+      "metadata_link": "https://gateway.irys.xyz/4v9sr8ruNvSeu3u1DRnFWLyvMjkqnqEJzg1NnT823Ei8",
+      "onChain": true,
+      "mint_address": "D5xuqEidKYjjJ4QaboExmcNryL7iWMaf5HdffCbKEMED"
+    },
+    "8": {
+      "name": "Queen of Pets #8",
+      "image_hash": "04c3fc3fca951ec01a693ab87bee0d0218d68c0b2d119e1659bec25b1dab0f9f",
+      "image_link": "https://gateway.irys.xyz/DD1nh4zAapLuKftaTZpPMDoJ8x8gdhG2eW9BGhcufWho?ext=png",
+      "metadata_hash": "11ca8193569f18166317e05ffa96fd9cd5e903138b66f237a6a7c571cdd90612",
+      "metadata_link": "https://gateway.irys.xyz/9bpijF3yus6LThyiGZuJ97hSTH69KXYPgpEQJAzZApQH",
+      "onChain": true,
+      "mint_address": "8Jr7MiXFAG5gpqSJ3dPmA1CDrBoxwT3jdm6h2ueESX1o"
+    },
+    "9": {
+      "name": "Queen of Pets #9",
+      "image_hash": "e95bd3a3684d639e628da6daedbb8792c1ef7213ab1d41abac030598d7e88f19",
+      "image_link": "https://gateway.irys.xyz/BfFaRPLc9xkaqvwyKiE491QFkQmhR5d8Gt1LrWqCnHoo?ext=png",
+      "metadata_hash": "a05782fbfa19835b98a74be73f7a277ba04c493e95400cdf6f102ca365d5a713",
+      "metadata_link": "https://gateway.irys.xyz/9GPessqxGVPc1GtPPEuB2tkNNmSegXtUugynEpSaf52R",
+      "onChain": true,
+      "mint_address": "HrWuKNsRsxoYdrn2oiuKqTJAsVS138t8cGXgu6APprBv"
+    },
+    "10": {
+      "name": "Queen of Pets #10",
+      "image_hash": "8ff4c04c9307c06803828d3e1b67e98d19a302d733dc1c1928c7c0d0c5442e5c",
+      "image_link": "https://gateway.irys.xyz/YaJGe2XpoGHD95wwH4HUNhxBy8Yqh4FBiCLS4jNWqUM?ext=png",
+      "metadata_hash": "e2ab7ae8cc017151324b49085f016347e94366a05c0d3aed42fd002898ccd38e",
+      "metadata_link": "https://gateway.irys.xyz/4Pe7Qn5WP8GaM6YH1DqifKTZMTYy8N9Yj8q9RH6ygd2G",
+      "onChain": true,
+      "mint_address": "Fj36CxYFpBToWCSZcGCsV6kAcKZU3zeSRteWwfaMXAhm"
+    },
+    "-1": {
+      "name": "Queen of Pets",
+      "image_hash": "9e778c14cfd6fb3f3b098e0fee3867943ff4e2cc7fc83562a4b451a9e40c9025",
+      "image_link": "https://gateway.irys.xyz/DfRLTZ39aBepBTvuEtdeHLXupbc6rogC4BhEusNZc5ak?ext=png",
+      "metadata_hash": "5b0bd36b71e0cd4fa156e4c51c193184e775a1dc6a39fab9eb5ff9906446a5c5",
+      "metadata_link": "https://gateway.irys.xyz/FoyzCQ3hhYnR4BqgXUEhdJo5ojfceXt8Xu7b6UcmKS1q",
+      "onChain": true
+    }
+  }
+}

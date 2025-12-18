@@ -1,0 +1,21 @@
+{
+  "name":"Queen of Colors",
+  "symbol" : "AraQ",
+  "id_nft" :"100-QC-coll",
+  "status" : "",
+  "creator" : "",
+  "description": "The AraQueen NFT Colors Collection — elegant digital queens representing colors, moods, and stories.",
+  "image": "collection.jpg",
+  "attributes": [
+    { "trait_type": "Item", "value": "100" },
+    { "trait_type": "Tier", "value": "Elite (Basic)" }
+  ], 
+  "properties": {
+    "files": [
+      {
+        "uri":"collection.jpg",
+        "type":"image/jpg"
+      }
+    ]
+  }
+}

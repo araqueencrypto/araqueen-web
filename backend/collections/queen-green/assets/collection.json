@@ -1,0 +1,24 @@
+{
+  "name": "Queen of green",
+  "description": "The core Queen or green plant character often wearing a hat and residing in a pot.",
+  "symbol": "AraQ",
+  "coll"  : "Queen of green",
+  "id_nft" :"100-QG-coll",
+  "status" : "",
+  "creator" : "",
+  "image": "collection.png",
+  
+  "attributes": [
+    { "trait_type": "Item", "value": "100" },
+    { "trait_type": "Tier", "value": "Elite (Basic)" }
+  ],
+  "properties": {
+    "category"  : "image",
+    "files": [
+      {
+        "uri":"collection.png",
+        "type":"image/jpg"
+      }
+    ]
+  }
+}

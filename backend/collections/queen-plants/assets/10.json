@@ -1,0 +1,27 @@
+ {
+  "name": "Queen of Plants #10",
+  "description": "The core Queen of the collection consists of variations of an anthropomorphic, fuzzy green plant character often wearing a hat and residing in a pot.",
+  "symbol": "AraQ",
+  "coll"  : "Queen of Plants",
+  "seller_fee_basis_points": 500,
+  "image": "10.png",
+  "id_nft" : "011-QPL",
+  "list_price": "", 
+  "status": "",
+  "owner" : "",
+  "mint_address": "",
+  "attributes": [
+    { "trait_type": "Edition", "value": "011/100" },
+    { "trait_type": "Tier", "value": "Elite (Basic)" }
+  ], 
+ "properties": {
+    "category"  : "image",
+    "files": [
+      {
+        "uri": "10.jpg",
+        "type": "image/jpeg"
+      }
+    ]
+    
+  }
+}

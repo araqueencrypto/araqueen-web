@@ -1,0 +1,27 @@
+ {
+  "name": "Queen of Colors #2",
+  "description": "A gentle queen who finds peace in colors.",
+  "symbol": "AraQ",
+  "coll"  : "Queen of Colors",
+  "seller_fee_basis_points": 500,
+  "image": "2.jpg",
+  "id_nft" : "003-QC",
+  "list_price": "", 
+  "status": "",
+  "owner" : "",
+  "mint_address": "",
+  "attributes": [
+    { "trait_type": "Edition", "value": "003/100" },
+    { "trait_type": "Tier", "value": "Elite (Basic)" }
+  ], 
+  "properties": {
+    "category"  : "image",
+    "files": [
+      {
+        "uri": "2.jpg",
+        "type": "image/jpeg"
+      }
+    ]
+    
+  }
+}

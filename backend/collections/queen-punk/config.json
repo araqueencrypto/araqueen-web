@@ -1,0 +1,33 @@
+{
+  "number": 11,
+  "symbol": "AraQ",
+  "sellerFeeBasisPoints": 500,
+  "status" :"",
+  "mint_address": "",
+  "creators": [
+    {
+      "address": "4qQvH8MNZrBKNdgMcCxsh4EzgJR6vTTifMWhXmGF8xvw",
+      "share": 100
+    }
+  ],
+  "collection": {
+    "address": "",
+    "updateAuthority": "4qQvH8MNZrBKNdgMcCxsh4EzgJR6vTTifMWhXmGF8xvw"
+  },
+  "properties": {
+    "category"  : "image"  
+  },
+  "isMutable": true,
+  "retainAuthority": true,
+  "hiddenSettings": null,
+  "isSequential": false,
+  "uploadMethod": "bundlr",
+  "ruleSet": null,
+  "guards": {
+    "default": {
+      "startDate": {
+        "date": "2025-11-10T00:00:00Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "program": {
+    "candyMachine": "CeBJt7BwbXicEyrGzAUJppRCRSMvK6KgnvhtDEdC71nz",
+    "candyGuard": "",
+    "candyMachineCreator": "BxZg2W9zTp6bkLYJKyB7dkqoSeiMt43uBWJhBgQKSKn6",
+    "collectionMint": "6HxHhM1s8N6DFJwiH46whYBDTNrsAQ7XuTebfNBuBZMF"
+  },
+  "items": {
+    "0": {
+      "name": "Queen of Punks #0",
+      "image_hash": "023cd0ef7f53659e2c7ac6642f55e82eb7c47ba58c84dcda5a16fb47555004e6",
+      "image_link": "https://gateway.irys.xyz/Aa417ZAGR2qEoCtaWom1VU9UaXUaxEtSX2a22tuCVRDc?ext=jpg",
+      "metadata_hash": "4271c4dcf29e047a272e2309528eb6b47ecc226ad0417395be970aeab1d7fb0a",
+      "metadata_link": "https://gateway.irys.xyz/GhMg2rournWqv2JFod44xDuSeJrFMvZTZUnvUsmDtMGH",
+      "onChain": true,
+      "mint_address": "A98Yhr9ZxtRcF8t3eZ7EkYk1MicXQaenhPteeNG6soBP"
+    },
+    "1": {
+      "name": "Queen of Punks #1",
+      "image_hash": "71fbf612b659198b656aaedb177423472b0a9f48d66421de95d8d78d1cf9cea0",
+      "image_link": "https://gateway.irys.xyz/E1NFhziAivPM2SYycTb5vqkGwszWDiRLbCksVUpExz7S?ext=jpg",
+      "metadata_hash": "a20fb172aff5ec8075aac5db07268a0cfe779dc7a3299460fc24c4c11bede722",
+      "metadata_link": "https://gateway.irys.xyz/StxETAHTtZV1c14tuhS67n4f97CNsRQ7BnjBQW1NNGD",
+      "onChain": true,
+      "mint_address": "9dHMicchn5fH6YfPZ6JR9tsXUWcBjt4bUaYbWBNGDtR2"
+    },
+    "2": {
+      "name": "Queen of Punks #2",
+      "image_hash": "a40e10ecb7aa2e41d7177d82de3008ff14c595d525f40d163a95dc20b3b11642",
+      "image_link": "https://gateway.irys.xyz/F2EQtY6VBSZPwnf6os8BfoirJgTxvVGLfeKHsP9HwH1X?ext=jpg",
+      "metadata_hash": "e2f6c5e5e0743a04fd0dfd905fc2cb921b3a9ce13db3275c7039040c97435554",
+      "metadata_link": "https://gateway.irys.xyz/6e2pXz5T4U97UJh1YRKYXeXjdQStdc7UqM3vL3GTG6Yi",
+      "onChain": true,
+      "mint_address": "8bpHuo4ryJTbCfxbsSGHHGyYsYtPPx4ziuzkWEfvtFJp"
+    },
+    "3": {
+      "name": "Queen of Punks #3",
+      "image_hash": "b3d6c4a665ccd978efd9bcff12d3323c5fcde1210d296dcbf73d10331b1f08b5",
+      "image_link": "https://gateway.irys.xyz/Bv4iZKodcpQiyTT1X65bVu6V5uk2532BqQoVrKKzdKzm?ext=jpg",
+      "metadata_hash": "abab5b8c5dd1139c862dc36335509ec14f498cd5295522c9c7560110608c8762",
+      "metadata_link": "https://gateway.irys.xyz/57UySpq6oXctXYjQdZfAgkhqJt4Qu1VhJ1qA2btVqVii",
+      "onChain": true,
+      "mint_address": "HinGP7WxkYGKM9NtWJCLa37ZvPSrWCeavLeCYJLNrmVm"
+    },
+    "4": {
+      "name": "Queen of Punks #4",
+      "image_hash": "d151fb484cd0782444b542314552b0e0e96af14ef55e9b9d0f530359a0797219",
+      "image_link": "https://gateway.irys.xyz/4aDfM2xUh1K4VEcoSN4MP5zB8dAFGV6e61Qacwcs7BzT?ext=jpg",
+      "metadata_hash": "4b3ce835f104a4f1c4ccc575ce6ed146343459f02e72988c2348c43ad81093c7",
+      "metadata_link": "https://gateway.irys.xyz/9EW7S7YTDex3frXxVrSyazek7ALMj6VEP64Ni27dNCjk",
+      "onChain": true,
+      "mint_address": "42Ca5ZJXyPHmzmnVAp8cUKhwKvbf51Y2NTZFoCxBNkMs"
+    },
+    "5": {
+      "name": "Queen of Punks #5",
+      "image_hash": "4214d11fdae796dfaa91b19469679967355c40fae086444518ebab3eeecc4710",
+      "image_link": "https://gateway.irys.xyz/PFNsnmKFVbaqVPqxha4kAFsGZ74Ytub89qVprwHreK1?ext=jpg",
+      "metadata_hash": "b1cbb690a84aadfa16374505cde8f51f17813dd0cf20f336722e4bff63737cc1",
+      "metadata_link": "https://gateway.irys.xyz/6jn5JCjsCVWrymmNGufrfTQSYjrXSu8cpaagkkcqymU8",
+      "onChain": true,
+      "mint_address": "FyeKuifzaJpvDT6SdRATVZZ2mcA8WVedfSQVHBiCKPbc"
+    },
+    "6": {
+      "name": "Queen of Punks #6",
+      "image_hash": "8a0f56789d8e571fed2aaf29086b8fa5dca863f56be581da9f93e27b3c55e004",
+      "image_link": "https://gateway.irys.xyz/FmLrFQHtJ6iwJaA8RHvXGfovy1caKq3ygZZyP9ruMXib?ext=jpg",
+      "metadata_hash": "49a1f3c9719388e9096b403c64a6da259ddf7fab9de4ad6c414e1b34040ffac0",
+      "metadata_link": "https://gateway.irys.xyz/4HBcCcuowtTVrfcFGDXtHYVGdH8cnSfcXpqjpSPRekPh",
+      "onChain": true,
+      "mint_address": "2g5KTLBWWvBKLZuBPmzG5C2PrBsdesGQCki8EpgoFnYr"
+    },
+    "7": {
+      "name": "Queen of Punks #7",
+      "image_hash": "3e986de84ff51760af8700a2a8b038f108e942377a492a41ef027ab7d80e8b20",
+      "image_link": "https://gateway.irys.xyz/EqJANWvxvbxkfxGMM9ccMV6Y8eE6RsVf8yRF5vMDpgQ5?ext=jpg",
+      "metadata_hash": "4c229d48c229a1f6dd3530c1cae27fe5965472e0318e26d45f8c29d26bf99f3c",
+      "metadata_link": "https://gateway.irys.xyz/AabpA1y96W2uLtQjWzyDGQRmVAZJdxyokAttpEXdETrH",
+      "onChain": true,
+      "mint_address": "BTpscyam2smEbAqbkwja2nj64r6FJmrcVZXcj2XKzBJu"
+    },
+    "8": {
+      "name": "Queen of Punks #8",
+      "image_hash": "126fccf09d2d998e5174b0993d5b1655330e9e22214a8c5051e48e5363f02887",
+      "image_link": "https://gateway.irys.xyz/i6Y3Hgarn5qtTfD6F8ftnKboTFU5rdcX1ptdcK6mpFX?ext=jpg",
+      "metadata_hash": "6357aa80506e92bccc5c6e076c5d952abfc63a3d97d97dd879ba5dffabf1580b",
+      "metadata_link": "https://gateway.irys.xyz/7fRoK5Tzorg7kHzHBdVBuGeo2GS3DfqnvGmXxjTemXgr",
+      "onChain": true,
+      "mint_address": "7cZgNemFEW1SshcGrPxm6SktWBUango5gp8FXzdyzF9f"
+    },
+    "9": {
+      "name": "Queen of Punks #9",
+      "image_hash": "aaeb6cb08f9790dbf4eaa4c9eb26d753c195d532cc273ad6a9845190e2327ec6",
+      "image_link": "https://gateway.irys.xyz/6PNzh3g93fRu4i9mTRLhGVNskTo7YDAAayAotr2UP83C?ext=jpg",
+      "metadata_hash": "7d2d66d9d247fecef500896cc596291728195b75b54109ef08863bf71bbd6561",
+      "metadata_link": "https://gateway.irys.xyz/CtNPVuLEQR3RXzNT9hdj4xixAUfmAnNVKNsG3mhTAfxN",
+      "onChain": true,
+      "mint_address": "6Ge3yNWYtxDXHtA5XwJHEYyEKd49apZHd7Du3H1QgABv"
+    },
+    "10": {
+      "name": "Queen of Punks #10",
+      "image_hash": "945f1a87a0f5c7d014e4ad519422224a9bf570eae222bf14b9438a13c101ec9f",
+      "image_link": "https://gateway.irys.xyz/28feRTySrskgvQrx7tDAYVi856prcpMxXzkZSgthajay?ext=jpg",
+      "metadata_hash": "440486930243fe953548424e6848bfd707dd598de2c3901f6c3abeaf07ec2713",
+      "metadata_link": "https://gateway.irys.xyz/Cq4DRpavJ5TDnDGrXy1c42LcREmn7K2Pnttm3gRuAht7",
+      "onChain": true,
+      "mint_address": "Dms8Ur74ocD34yZg5a1EVfys6UrGwZPPRwUQmetS8QJL"
+    },
+    "-1": {
+      "name": "Queen of Punks",
+      "image_hash": "c6ba9b848544f6acbead70fa4a6763bfd457dacf5049470f22858d33c5ea1a4b",
+      "image_link": "https://gateway.irys.xyz/3eMG7FLk5rWWTSVA25WzqWG5sN8mqMTbgVKPQQ5mxCEX?ext=jpg",
+      "metadata_hash": "00d1bb0a73baf671a94b9b1381d8cd8d64f8ebb38dd13679c588e578afa68034",
+      "metadata_link": "https://gateway.irys.xyz/94P9D4xKETpUeQZwhy11cHXxi2gHA5DpumT688t5YEFV",
+      "onChain": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+ {
+  "name": "Queen of Punks #5",
+  "description": "The core Queen Collection Of Punk Fututistic.",
+  "symbol": "AraQ",
+  "coll"  : "Queen of Punks",
+  "seller_fee_basis_points": 500,
+  "image": "5.jpg",
+  "id_nft" : "006-QPK",
+  "list_price": "", 
+  "status": "",
+  "owner" : "",
+  "mint_address": "",
+  "attributes": [
+    { "trait_type": "Edition", "value": "006/100" },
+    { "trait_type": "Tier", "value": "Legendary" }
+  ], 
+ "properties": {
+    "category"  : "image",
+    "files": [
+      {
+        "uri": "5.jpg",
+        "type": "image/jpeg"
+      }
+    ]
+    
+  }
+}

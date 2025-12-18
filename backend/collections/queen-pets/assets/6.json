@@ -1,0 +1,27 @@
+ {
+  "name": "Queen of Pets #6",
+  "description": "How Cuteness The Queen Pets.",
+  "symbol": "AraQ",
+  "coll"  : "Queen of Pets",
+  "seller_fee_basis_points": 500,
+  "image": "6.jpg",
+  "id_nft" : "007-QP",
+  "list_price": "", 
+  "status": "",
+  "owner" : "",
+  "mint_address": "",
+  "attributes": [
+    { "trait_type": "Edition", "value": "007/100" },
+    { "trait_type": "Tier", "value": "Elite (Basic)" }
+  ], 
+ "properties": {
+    "category"  : "image",
+    "files": [
+      {
+        "uri": "6.jpg",
+        "type": "image/jpeg"
+      }
+    ]
+    
+  }
+}
