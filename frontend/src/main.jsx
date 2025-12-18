@@ -1,4 +1,7 @@
 // main.jsx
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
+
 
 import React, { useMemo } from "react";
 import ReactDOM from "react-dom/client";
