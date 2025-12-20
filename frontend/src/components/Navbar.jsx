@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "#home" },
     { name: "Foundation", href: "#foundation" },
     { name: "Marketplace-DevNet", href: "/Marketplace", external: true },
   ];
