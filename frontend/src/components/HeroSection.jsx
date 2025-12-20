@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
-
 export default function HeroSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -18,100 +17,94 @@ export default function HeroSection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const y = useTransform(scrollYProgress, [0, 1], isMobile ? ["0%", "0%"] : ["0%", "0%"]);
+  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
     <section
       ref={ref}
-      id="hero"
-      className="relative min-h-screen overflow-hidden flex items-center justify-center md:justify-start pt-[80px] md:pt-[100px]"
+      id="home"
+      className="relative min-h-screen overflow-hidden flex items-center justify-center pt-[90px]"
     >
-      {/* Background */}
-      {!isMobile ? (
-        <motion.div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/araqueen-palacedesk.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-            backgroundSize: "100% 100%",
-            y,
-          }}
-        />
-      ) : (
-        <div
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-top"
-          style={{
-            backgroundImage: "url('/araqueen-palace002.jpg')",
-            backgroundSize: "cover",
-          }}
-        />
-      )}
+      {/* === BACKGROUND CORE === */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#12001f] via-[#2b0040] to-[#0b0012]" />
 
-      {/* Konten utama */}
+      {/* === COSMIC AURA GLOW === */}
+      <motion.div
+        style={{ y: glowY }}
+        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full 
+        bg-[radial-gradient(circle_at_center,rgba(200,120,255,0.35),transparent_65%)] blur-3xl"
+      />
+
+      <motion.div
+        className="absolute bottom-[-30%] right-[-20%] w-[700px] h-[700px] rounded-full 
+        bg-[radial-gradient(circle_at_center,rgba(255,200,100,0.25),transparent_70%)] blur-3xl"
+      />
+
+      {/* === NOISE OVERLAY (MYSTIC TEXTURE) === */}
       <div
-        className={`relative z-20 flex flex-col ${
-          isMobile
-            ? "items-center text-center -mt-20"
-            : "items-start text-left ml-[1%]"
-        } justify-center max-w-6xl mx-auto px-3`}
+        className="absolute inset-0 z-10 opacity-[0.06] pointer-events-none"
+        style={{
+          backgroundImage:
+            "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"120\" height=\"120\" filter=\"url(%23n)\" opacity=\"0.4\"/></svg>')",
+        }}
+      />
+
+      {/* === CONTENT === */}
+      <div
+        className={`relative z-20 max-w-6xl mx-auto px-4 flex flex-col ${
+          isMobile ? "items-center text-center" : "items-start text-left"
+        }`}
       >
-        {/* Judul dengan efek bersinar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* TITLE */}
+        <motion.h1
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="leading-[1.1] mb-4 group cursor-pointer"
+          className="leading-[1.05] mb-5"
         >
-          <h1 className="text-[3rem] md:text-[5rem] font-extrabold text-gray-900 tracking-tight transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-yellow-300 group-hover:to-pink-500 group-hover:drop-shadow-[0_0_20px_rgba(255,180,0,0.8)]">
-            <span className="block">
-              The{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400 group-hover:from-yellow-300 group-hover:to-pink-500">
-                AraQueen
-              </span>
+          <span className="block text-[3rem] md:text-[5.5rem] font-extrabold tracking-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-fuchsia-400 to-amber-300 drop-shadow-[0_0_25px_rgba(200,120,255,0.6)]">
+              AraQueen
             </span>
-            <span className="block group-hover:text-yellow-400">Kingdom</span>
-          </h1>
-        </motion.div>
+          </span>
 
-        {/* Paragraf */}
+          <span className="block text-[2.2rem] md:text-[4.5rem] font-extrabold text-white/90">
+            Kingdom
+          </span>
+        </motion.h1>
+
+        {/* DESCRIPTION */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
-          className="text-white-800 max-w-md md:max-w-sm mb-4 text-[15px] leading-relaxed font-medium"
+          className="max-w-md text-[15px] md:text-base text-white/80 leading-relaxed mb-6"
         >
-          From memes to meaning — a token that funds reality. Join the citizens
-          building a sustainable kingdom.
+          Born beyond the stars — AraQueen is a mystic alien sovereign who can
+          transform into anything, yet remains eternally violet.
         </motion.p>
 
-        {/* Tombol Aksi */}
-        <div
-          className={`flex flex-wrap gap-4 ${
-            isMobile
-              ? "justify-center mt-[180px]"
-              : "justify-start mt-4"
-          } mb-8`}
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className={`flex gap-4 ${
+            isMobile ? "justify-center mt-6" : "justify-start"
+          }`}
         >
           <a
             href="https://pump.fun/profile/araqueencrypto?tab=coins"
-                 target="_blank"
-              rel="noopener noreferrer"
-            className="px-5 py-3 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 text-white text-sm md:text-base font-semibold shadow hover:scale-105 transition-transform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full text-sm md:text-base font-semibold text-black
+            bg-gradient-to-r from-violet-300 via-fuchsia-400 to-amber-300
+            shadow-[0_0_25px_rgba(200,120,255,0.6)]
+            hover:scale-105 transition-transform"
           >
-            BUY COIN
+            ENTER THE KINGDOM
           </a>
-          <a
-            href="https://drive.google.com/file/d/1-ctfdkHzcajUvy9IPueCkOYop7N7nqSh/view"
-                 target="_blank"
-              rel="noopener noreferrer"
-            className="px-5 py-3 rounded-full border border-pink-200 text-pink-600 hover:bg-pink-50 text-sm md:text-base font-semibold transition"
-          >
-            Whitepaper
-          </a>
-        </div>
-
-
+        </motion.div>
       </div>
     </section>
   );

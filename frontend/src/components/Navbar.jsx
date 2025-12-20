@@ -4,82 +4,85 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // 🔹 Menu navigasi utama
   const menuItems = [
     { name: "Home", href: "#hero" },
-    { name: "Royal Foundation", href: "#royal-foundation" },
-    { name: "Token Insigth", href: "#tokeninsigth" },
-    // 👑 Ganti NFTs menjadi link ke halaman galeri baru
-    { name: "Marketplace/ DEV TEST NET", href: "/Marketplace", external: true },
-    { name: "Join", href: "#join" },
+    { name: "Foundation", href: "#foundation" },
+    { name: "Marketplace-DevNet", href: "/Marketplace", external: true },
   ];
 
-  const handleLaunchClick = () => {
-    alert(
-      "🛠️ AraQueen App is under development. Join our community to be notified when it's live!"
-    );
-  };
-
   return (
-    <nav className="fixed top-[38px] left-0 right-0 z-50 bg-transparent border-none shadow-none backdrop-blur-0 transition-all duration-300">
-      <div className="flex items-center justify-between px-4 md:px-8 py-2 sm:py-3 md:py-4 max-w-7xl mx-auto">
-        {/* LOGO */}
-        <div className="flex items-center gap-2 md:gap-3">
-          <img
-            src="/favicon.png"
-            alt="AraQueen Logo"
-            className="w-8 h-8 md:w-10 md:h-10 drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]"
-          />
-          <span className="font-bold text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-yellow-300 drop-shadow-[0_0_3px_rgba(0,0,0,0.5)]">
-            AraQueen
-          </span>
-        </div>
-
-        {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-6">
-          {menuItems.map((item, i) =>
-            item.external ? (
-              <a
-                key={i}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-white hover:text-yellow-300 transition-all drop-shadow-[0_0_3px_rgba(0,0,0,0.6)]"
-              >
-                {item.name}
-              </a>
-            ) : (
-              <a
-                key={i}
-                href={item.href}
-                className="text-sm font-medium text-white hover:text-yellow-300 transition-all scroll-smooth drop-shadow-[0_0_3px_rgba(0,0,0,0.6)]"
-              >
-                {item.name}
-              </a>
-            )
-          )}
-
-          <button
-            onClick={handleLaunchClick}
-            className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-3 py-1.5 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
-          >
-            Launch App
-          </button>
-        </div>
-
-        {/* MOBILE MENU ICON */}
-        <button
-          className="text-black hover:text-pink-300 transition-all"
-          onClick={() => setIsOpen(!isOpen)}
+    <nav className="fixed top-[38px] left-0 right-0 z-50">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
+        <div
+          className="grid grid-cols-3 items-center h-14 md:h-16
+          bg-black/30 backdrop-blur-md rounded-full
+          border border-white/10 shadow-[0_0_30px_rgba(180,120,255,0.15)]"
         >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+          {/* LEFT — LOGO */}
+          <div className="flex items-center gap-2 pl-4">
+            <img
+              src="/favicon.png"
+              alt="AraQueen Logo"
+              className="w-8 h-8 drop-shadow-[0_0_8px_rgba(200,120,255,0.8)]"
+            />
+            <span className="font-bold text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-fuchsia-400">
+              AraQueen
+            </span>
+          </div>
+
+          {/* CENTER — MENU (DESKTOP) */}
+          <div className="hidden md:flex justify-center gap-8">
+            {menuItems.map((item, i) =>
+              item.external ? (
+                <a
+                  key={i}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-white/80 hover:text-violet-300 transition"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <a
+                  key={i}
+                  href={item.href}
+                  className="text-sm font-medium text-white/80 hover:text-violet-300 transition"
+                >
+                  {item.name}
+                </a>
+              )
+            )}
+          </div>
+
+          {/* RIGHT — CTA / MOBILE MENU */}
+          <div className="flex justify-end items-center pr-4">
+            {/* Desktop CTA */}
+            <a
+              href="#footer"
+              className="hidden md:inline-flex px-4 py-2 rounded-full text-sm font-semibold
+              bg-gradient-to-r from-violet-300 via-fuchsia-400 to-amber-300 text-black
+              shadow-[0_0_18px_rgba(200,120,255,0.5)]
+              hover:scale-105 transition-transform"
+            >
+              Join
+            </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-white ml-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* MOBILE DROPDOWN */}
       {isOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-sm animate-fadeInDown">
-          <div className="flex flex-col items-center py-3 space-y-3">
+        <div className="md:hidden mt-3 mx-4 rounded-2xl bg-black/80 backdrop-blur-lg border border-white/10">
+          <div className="flex flex-col items-center py-4 space-y-4">
             {menuItems.map((item, i) =>
               item.external ? (
                 <a
@@ -88,7 +91,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-medium text-white hover:text-yellow-300 transition-all"
+                  className="text-sm font-medium text-white/80 hover:text-violet-300"
                 >
                   {item.name}
                 </a>
@@ -97,21 +100,20 @@ export default function Navbar() {
                   key={i}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-medium text-white hover:text-yellow-300 transition-all"
+                  className="text-sm font-medium text-white/80 hover:text-violet-300"
                 >
                   {item.name}
                 </a>
               )
             )}
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                handleLaunchClick();
-              }}
-              className="rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 px-5 py-2 text-white text-sm font-semibold shadow-md hover:shadow-yellow-400/40 transition-all"
+            <a
+              href="#footer"
+              onClick={() => setIsOpen(false)}
+              className="px-5 py-2 rounded-full text-sm font-semibold
+              bg-gradient-to-r from-violet-300 to-fuchsia-400 text-black"
             >
-              Launch App
-            </button>
+              Join Community
+            </a>
           </div>
         </div>
       )}

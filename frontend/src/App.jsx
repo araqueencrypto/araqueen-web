@@ -5,8 +5,6 @@ import RunningText from "./components/RunningText";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import RoyalFoundation from "./components/RoyalFoundation";
-import JourneySection from "./components/JourneySection";
-import JoinCTA from "./components/JoinCTA";
 import Footer from "./components/Footer";
 
 
@@ -35,24 +33,20 @@ export default function App() {
 
       {/* Konten utama dimulai tepat setelah bar atas */}
       <main className="relative z-10 pt-[40px] bg-white">
-        <section id="hero" className="scroll-mt-[40px]">
+        <section id="home" className="scroll-mt-[40px]">
           <HeroSection />
         </section>
 
-        <section id="royal-foundation" className="scroll-mt-[40px]">
+        <section id="foundation" className="scroll-mt-[40px]">
           <RoyalFoundation />
         </section>
 
-        <section id="journey" className="scroll-mt-[40px]">
-          <JourneySection />
-        </section>
-
-        <section id="join" className="scroll-mt-[40px]">
-          <JoinCTA />
+        <section id="footer" className="scroll-mt-[40px]">
+          <Footer />
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   );
 }
