@@ -10,6 +10,23 @@ import { FetchCollection } from "./FetchCollection.js";
 import nftRoutes from "./routes/nfts.js";
 import collectionRoutes from "./routes/collections.js";
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://vercel.com/araqueencryptos-projects/araqueencryptoofficialwebsite/5hprfa3vpsvyAbtPhugmpwS2ZWuw" // domain FE kamu
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (mobile apps, curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true
+}));
+
 
 
 process.on("unhandledRejection", (reason, promise) => {
@@ -19,7 +36,6 @@ process.on("unhandledRejection", (reason, promise) => {
 
 
 //ROUTES 002----core txh
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
