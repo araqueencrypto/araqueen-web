@@ -10,14 +10,26 @@ import { FetchCollection } from "./FetchCollection.js";
 import nftRoutes from "./routes/nfts.js";
 import collectionRoutes from "./routes/collections.js";
 
+// =======================
+// INIT
+// =======================
+dotenv.config();
+
+const app = express(); // ✅ HARUS PALING AWAL
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// =======================
+// CORS
+// =======================
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://vercel.com/araqueencryptos-projects/araqueencryptoofficialwebsite/5hprfa3vpsvyAbtPhugmpwS2ZWuw" // domain FE kamu
+  "https://vercel.com/araqueencryptos-projects/araqueencryptoofficialwebsite/8NMF47k1uh8kmPn92ur4JsppE3Dd" // FE Vercel kamu
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow requests with no origin (mobile apps, curl)
     if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) {
       return callback(null, true);
@@ -27,34 +39,32 @@ app.use(cors({
   credentials: true
 }));
 
-
-
-process.on("unhandledRejection", (reason, promise) => {
-  console.error("Unhandled Rejection at:", promise, "reason:", reason);
-  // don't exit — log and continue (for dev). Consider process.exit(1) in production.
-});
-
-
-//ROUTES 002----core txh
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-dotenv.config();
-const app = express();
+// =======================
+// MIDDLEWARE
+// =======================
 app.use(express.json());
-app.use(cors());
-await FetchCollection();
-
 app.use(bodyParser.json({ limit: "5mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection:", reason);
+});
 
-// 🔹 Serve static files
+// =======================
+// INIT DATA
+// =======================
+await FetchCollection();
+
+// =======================
+// STATIC FILES
+// =======================
 app.use("/collections", express.static(path.join(__dirname, "collections")));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/collections", collectionRoutes);
 
-// 🔹 API Routes
+// =======================
+// API ROUTES
+// =======================
 app.use("/api/nfts", nftRoutes);
 
 app.get("/api/health", (req, res) => {
@@ -65,19 +75,17 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// 🔹 Root Route
+// =======================
+// ROOT ROUTE
+// =======================
 app.get("/", (req, res) => {
   res.send("🟢 AraQueen Backend is running...");
 });
 
-app.get("/nfts", async (req, res) => {
-      const data = await fetchAllCollectionsNFTs();
-      res.json(data);
-});
-
-
+// =======================
+// START SERVER
+// =======================
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`🚀 Backend running on port ${PORT}`);
-
 });
