@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename);
 const allowedOrigins = [
   // Local dev
   "http://localhost:5173",
-  "http://localhost:3000",
+  "http://localhost:8080",
 
   // Vercel default
   "https://araqueen.vercel.app",
