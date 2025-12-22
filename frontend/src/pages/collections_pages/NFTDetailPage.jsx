@@ -66,19 +66,31 @@ export default function NFTDetailPage() {
   };
 
   useEffect(() => {
-    async function load() {
+  async function load() {
+    try {
       setLoading(true);
 
-      const d = await getNFTDetail(id);
-      setNft(d || null);
+      const res = await getNFTDetail(id);
+      const nftData = res?.data || null;
 
-      const act = await getActivity(d?.mint_address || id);
-      setActivity(act || []);
+      setNft(nftData);
 
+      if (nftData) {
+        const act = await getActivity(nftData.mint_address || id);
+        setActivity(act?.data || act || []);
+      }
+
+    } catch (err) {
+      console.error("NFT detail load error:", err);
+      setNft(null);
+    } finally {
       setLoading(false);
     }
-    load();
-  }, [id]);
+  }
+
+  load();
+}, [id]);
+
 
   if (loading) return <div className="p-6 text-center text-gray-400">.......</div>;
   if (!nft) return <div className="p-6 text-center text-gray-400">NFT not found.</div>;
