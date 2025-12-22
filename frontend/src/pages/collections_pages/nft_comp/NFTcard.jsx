@@ -1,7 +1,8 @@
 import React from "react";
 import { Heart } from "lucide-react";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 function getImageUrl(raw) {
   if (!raw) return "/placeholder-nft.png";

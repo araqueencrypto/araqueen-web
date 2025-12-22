@@ -24,17 +24,20 @@ const __dirname = path.dirname(__filename);
 // CORS (PRODUCTION SAFE)
 // =======================
 const allowedOrigins = [
-  // Local dev
+  // Local dev (SEMUA kemungkinan)
   "http://localhost:5173",
+  "http://127.0.0.1:5173",
   "http://localhost:8080",
+  "http://127.0.0.1:8080",
 
   // Vercel default
   "https://araqueen.vercel.app",
 
-  // Custom domains (WAJIB dua-duanya)
+  // Custom domains
   "https://araqueencrypto.com",
   "https://www.araqueencrypto.com"
 ];
+
 
 app.use(
   cors({

@@ -70,14 +70,13 @@ export default function NFTDetailPage() {
     try {
       setLoading(true);
 
-      const res = await getNFTDetail(id);
-      const nftData = res?.data || null;
-
-      setNft(nftData);
+      // 🔥 FIX UTAMA: getNFTDetail sudah return NFT object
+      const nftData = await getNFTDetail(id);
+      setNft(nftData || null);
 
       if (nftData) {
         const act = await getActivity(nftData.mint_address || id);
-        setActivity(act?.data || act || []);
+        setActivity(act || []);
       }
 
     } catch (err) {
@@ -90,6 +89,7 @@ export default function NFTDetailPage() {
 
   load();
 }, [id]);
+
 
 
   if (loading) return <div className="p-6 text-center text-gray-400">.......</div>;
