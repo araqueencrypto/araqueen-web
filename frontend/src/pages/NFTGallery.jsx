@@ -4,7 +4,9 @@ import { Grid3X3, List } from "lucide-react";
 
 import NFTcard from "./collections_pages/nft_comp/NFTcard";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 export default function NFTGallery() {
   const [nfts, setNfts] = useState([]);

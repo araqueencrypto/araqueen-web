@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function Portfolio() {
   const { connected, publicKey } = useWallet();

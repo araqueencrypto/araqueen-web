@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 // CLEAN NAMA KOLEKSI
 function cleanCollectionName(n) {

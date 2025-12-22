@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import { fetchHealth } from "./api/backend";
-
 import RunningText from "./components/RunningText";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -9,16 +7,6 @@ import Footer from "./components/Footer";
 
 
 export default function App() {
-
-  useEffect(() => {
-    fetchHealth()
-      .then(data => {
-        console.log("Backend connected:", data);
-      })
-      .catch(err => {
-        console.error("Backend error:", err);
-      });
-  }, []);
 
 
   return (

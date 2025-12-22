@@ -7,7 +7,9 @@ import CollectionBanner from "./collec_page_comp/CollectionBanner";
 import CollectionStats from "./collec_page_comp/CollectionStats";
 import CollectionNFTGrid from "./collec_page_comp/CollectionNFTGrid";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 export default function CollectionPage() {
   const { collectionName: name } = useParams();

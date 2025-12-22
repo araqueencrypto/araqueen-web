@@ -7,7 +7,9 @@ import NFTPriceChart from "./nft_comp/NFTPriceChart";
 import NFTActivityHistory from "./nft_comp/NFTActivityHistory";
 import { getNFTDetail, getActivity } from "../../services/nftService";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 // Image resolver
 const getImageUrl = (raw) => {

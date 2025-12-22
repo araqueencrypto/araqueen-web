@@ -67,14 +67,6 @@ app.use("/collections", collectionRoutes);
 // =======================
 app.use("/api/nfts", nftRoutes);
 
-app.get("/api/health", (req, res) => {
-  res.json({
-    status: "ok",
-    message: "Backend connected",
-    time: new Date().toISOString()
-  });
-});
-
 // =======================
 // ROOT ROUTE
 // =======================

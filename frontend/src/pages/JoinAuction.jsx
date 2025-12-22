@@ -3,7 +3,9 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { motion } from "framer-motion";
 import { CalendarDays } from "lucide-react";
 
-const backendBaseUrl = "http://localhost:8080";
+//const backendBaseUrl = "http://localhost:8080";
+const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 export default function JoinAuction() {
   const { connected, publicKey } = useWallet();
