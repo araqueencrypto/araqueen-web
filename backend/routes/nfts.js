@@ -11,21 +11,20 @@ router.get("/", (req, res) => {
   try {
     const rows = db
       .prepare(`
-        SELECT * 
-        FROM nfts 
+        SELECT * FROM nfts
         ORDER BY collection, nft_index
       `)
       .all();
 
     return res.json({
       success: true,
-      data: rows,
+      data: rows
     });
   } catch (err) {
-    console.error("❌ Error GET /api/nfts:", err);
+    console.error("❌ GET /api/nfts error:", err);
     return res.status(500).json({
       success: false,
-      message: "Failed to fetch NFTs",
+      message: "Failed to fetch NFTs"
     });
   }
 });
@@ -33,49 +32,58 @@ router.get("/", (req, res) => {
 /**
  * GET NFT DETAIL
  * /api/nfts/:idOrMint
- * - support numeric ID
- * - support mint_address (Solana)
+ * Support:
+ * - numeric id
+ * - mint_address (decoded & normalized)
  */
 router.get("/:idOrMint", (req, res) => {
   try {
-    const { idOrMint } = req.params;
+    let { idOrMint } = req.params;
 
-    // Normalisasi: trim & pastikan string
-    const value = String(idOrMint).trim();
+    // 🔥 CRITICAL FIX: decode & normalize
+    const value = decodeURIComponent(String(idOrMint)).trim();
 
-    let row = null;
+    let nft = null;
 
-    // 1️⃣ Jika numeric, coba cari by ID
+    // 1️⃣ Try numeric ID
     if (!isNaN(value)) {
-      row = db
+      nft = db
         .prepare("SELECT * FROM nfts WHERE id = ?")
         .get(Number(value));
     }
 
-    // 2️⃣ Jika belum ketemu, coba cari by mint_address
-    if (!row) {
-      row = db
+    // 2️⃣ Try mint_address (exact match)
+    if (!nft) {
+      nft = db
         .prepare("SELECT * FROM nfts WHERE mint_address = ?")
         .get(value);
     }
 
-    // 3️⃣ Jika tetap tidak ada
-    if (!row) {
+    // 3️⃣ Fallback: LIKE match (safety net)
+    if (!nft) {
+      nft = db
+        .prepare("SELECT * FROM nfts WHERE mint_address LIKE ?")
+        .get(`%${value}%`);
+    }
+
+    if (!nft) {
       return res.status(404).json({
         success: false,
         message: "NFT not found",
+        debug: value
       });
     }
 
     return res.json({
       success: true,
-      data: row,
+      data: nft
     });
+
   } catch (err) {
-    console.error("❌ Error GET /api/nfts/:idOrMint:", err);
+    console.error("❌ GET /api/nfts/:idOrMint error:", err);
     return res.status(500).json({
       success: false,
-      message: "Failed to fetch NFT detail",
+      message: "Failed to fetch NFT detail"
     });
   }
 });
