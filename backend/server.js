@@ -15,29 +15,43 @@ import collectionRoutes from "./routes/collections.js";
 // =======================
 dotenv.config();
 
-const app = express(); // ✅ HARUS PALING AWAL
+const app = express(); // WAJIB PALING AWAL
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // =======================
-// CORS
+// CORS (PRODUCTION SAFE)
 // =======================
 const allowedOrigins = [
+  // Local dev
   "http://localhost:5173",
-  "https://vercel.com/araqueencryptos-projects/araqueencryptoofficialwebsite/8NMF47k1uh8kmPn92ur4JsppE3Dd" // FE Vercel kamu
+  "http://localhost:3000",
+
+  // Vercel default
+  "https://araqueen.vercel.app",
+
+  // Custom domains (WAJIB dua-duanya)
+  "https://araqueencrypto.com",
+  "https://www.araqueencrypto.com"
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error("Not allowed by CORS"));
-  },
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // allow server-to-server, curl, health checks
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.error("❌ CORS BLOCKED:", origin);
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true
+  })
+);
 
 // =======================
 // MIDDLEWARE
@@ -46,7 +60,7 @@ app.use(express.json());
 app.use(bodyParser.json({ limit: "5mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-process.on("unhandledRejection", (reason, promise) => {
+process.on("unhandledRejection", (reason) => {
   console.error("Unhandled Rejection:", reason);
 });
 
@@ -66,6 +80,15 @@ app.use("/collections", collectionRoutes);
 // API ROUTES
 // =======================
 app.use("/api/nfts", nftRoutes);
+
+// Health check (optional but recommended)
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "ok",
+    service: "AraQueen Backend",
+    time: new Date().toISOString()
+  });
+});
 
 // =======================
 // ROOT ROUTE
