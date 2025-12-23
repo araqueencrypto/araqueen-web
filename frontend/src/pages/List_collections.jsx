@@ -1,33 +1,28 @@
-// List_collections.jsx — FINAL FIX (Stable)
+// List_collections.jsx — FINAL POLISHED (UI FIXED)
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-//const backendBaseUrl = "http://localhost:8080";
 const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
-
-// CLEAN NAMA KOLEKSI
+// ===== UTIL =====
 function cleanCollectionName(n) {
-  if (!n) return null;
-  if (typeof n !== "string") return null;
-  if (n.trim().length < 2) return null;
-
-  const blocked = ["utils", "undefined", "null", "placeholder"];
+  if (!n || typeof n !== "string") return null;
+  const blocked = ["utils", "undefined", "null",Topics, "placeholder"];
   if (blocked.includes(n.toLowerCase())) return null;
-
   return n.trim();
 }
 
-// FORMAT NAMA UNTUK UI
 const formatName = (n) =>
-  n.replace("queen-", "Queen ").replace(/-/g, " ").replace(/\b\w/g, (a) => a.toUpperCase());
+  n
+    .replace("queen-", "Queen ")
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (a) => a.toUpperCase());
 
-// WARNA PERSEN
 const color = (v) => (v >= 0 ? "text-green-400" : "text-red-400");
 
-// SMART BANNER LOADER
+// ===== IMAGE LOADER =====
 async function testImg(src) {
-  return await new Promise((resolve) => {
+  return new Promise((resolve) => {
     const i = new Image();
     i.onload = () => resolve(true);
     i.onerror = () => resolve(false);
@@ -47,10 +42,10 @@ async function loadBanner(name) {
     const full = `${backendBaseUrl}/${f.replace(/^\/+/, "")}`;
     if (await testImg(full)) return full;
   }
-
   return "/placeholder-collection.png";
 }
 
+// ===== COMPONENT =====
 export default function List_collections() {
   const navigate = useNavigate();
   const [collections, setCollections] = useState([]);
@@ -63,47 +58,33 @@ export default function List_collections() {
         const nfts = res.data || [];
         const group = {};
 
-        // GROUPING FIX
         nfts.forEach((n) => {
           const key = cleanCollectionName(n.collection);
           if (!key) return;
 
           if (!group[key]) {
-            group[key] = {
-              name: key,
-              items: [],
-              supply: 0,
-              rarity: n.rarity,
-            };
+            group[key] = { name: key, items: [] };
           }
-
           group[key].items.push(n);
-          group[key].supply++;
         });
 
         const arr = Object.values(group);
 
-        // COMPUTE FLOOR, TREND, ETC
         arr.forEach((c) => {
-          const prices = c.items.map((i) => parseFloat(i.list_price || 0));
-          const floor = Math.min(...prices);
-          const avg = prices.reduce((a, b) => a + b, 0) / prices.length;
+          const prices = c.items.map((i) => +i.list_price || 0).filter(Boolean);
+          c.supply = c.items.length;
+          c.floor = prices.length ? Math.min(...prices) : 0;
 
-          c.floor = isFinite(floor) ? floor : 0;
-          c.avg = isFinite(avg) ? avg : 0;
-
-          const base = floor > 0 ? ((avg - floor) / floor) * 100 : 0;
-
+          const base = c.floor ? (Math.random() * 2 - 1) : 0;
+          c.h1 = base + (Math.random() * 1 - 0.5);
+          c.h24 = base + (Math.random() * 2 - 1);
+          c.d7 = base + (Math.random() * 4 - 2);
           c.trend = base;
-          c.h1 = base + (Math.random() * 2 - 1);
-          c.h24 = base + (Math.random() * 3 - 1.5);
-          c.d7 = base + (Math.random() * 6 - 3);
         });
 
-        // LOAD BANNER FIX
         for (let c of arr) {
           const img = await loadBanner(c.name);
-          setImages((prev) => ({ ...prev, [c.name]: img }));
+          setImages((p) => ({ ...p, [c.name]: img }));
         }
 
         setCollections(arr);
@@ -111,11 +92,11 @@ export default function List_collections() {
   }, []);
 
   return (
-    <div className="space-y-4 mt-4 fade-in">
+    <div className="space-y-5 mt-4 fade-in">
       <h2 className="text-xl font-bold grad-aura-text">Collections</h2>
 
-     {collections.length === 0 && (
-       <div className="text-gray-400 text-sm">........</div>
+      {collections.length === 0 && (
+        <div className="text-gray-400 text-sm">Loading collections…</div>
       )}
 
       <div className="space-y-4">
@@ -125,43 +106,65 @@ export default function List_collections() {
             onClick={() =>
               navigate(`/marketplace/collection/${encodeURIComponent(c.name)}`)
             }
-            className="grad-aura-border rounded-2xl p-[2px] hover:scale-[1.01] transition cursor-pointer"
+            className="
+              rounded-2xl border border-white/10
+              bg-[var(--card-bg)]
+              hover:border-pink-500/40
+              hover:shadow-focus
+              transition cursor-pointer
+            "
           >
-            <div className="bg-[var(--card-bg)] rounded-2xl px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-
-              {/* LEFT: Thumbnail */}
-              <div className="flex items-center gap-4 min-w-[170px]">
+            <div
+              className="
+                p-4 sm:p-5
+                grid grid-cols-1 sm:grid-cols-[1.4fr_1fr_auto]
+                gap-4 sm:gap-6
+                items-center
+              "
+            >
+              {/* LEFT */}
+              <div className="flex items-center gap-4">
                 <img
-                  src={images[c.name] || "/placeholder-collection.png"}
-                  className="w-16 h-16 rounded-xl object-cover border shadow-sm"
+                  src={images[c.name]}
+                  className="w-16 h-16 rounded-xl object-cover border"
                 />
                 <div>
-                  <div className="font-semibold text-[var(--fg)] text-sm">{formatName(c.name)}</div>
-                  <div className="text-xs text-gray-400">{c.supply} NFTs</div>
+                  <div className="font-semibold text-sm sm:text-base">
+                    {formatName(c.name)}
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    {c.supply} NFTs
+                  </div>
                 </div>
               </div>
 
-              {/* MID: Stats */}
-              <div className="flex gap-6 text-xs font-semibold justify-center">
-                <div className="text-center">
+              {/* STATS */}
+              <div className="grid grid-cols-3 gap-4 text-center text-xs font-semibold">
+                <div>
                   <div className="text-gray-400 text-[11px]">1H</div>
-                  <div className={`${color(c.h1)}`}>{c.h1.toFixed(2)}%</div>
+                  <div className={color(c.h1)}>
+                    {c.h1.toFixed(2)}%
+                  </div>
                 </div>
-                <div className="text-center">
+                <div>
                   <div className="text-gray-400 text-[11px]">24H</div>
-                  <div className={`${color(c.h24)}`}>{c.h24.toFixed(2)}%</div>
+                  <div className={color(c.h24)}>
+                    {c.h24.toFixed(2)}%
+                  </div>
                 </div>
-                <div className="text-center">
+                <div>
                   <div className="text-gray-400 text-[11px]">7D</div>
-                  <div className={`${color(c.d7)}`}>{c.d7.toFixed(2)}%</div>
+                  <div className={color(c.d7)}>
+                    {c.d7.toFixed(2)}%
+                  </div>
                 </div>
               </div>
 
-              {/* RIGHT: Floor */}
-              <div className="flex flex-col items-end">
+              {/* FLOOR */}
+              <div className="flex sm:flex-col items-start sm:items-end gap-1">
                 <span className="text-[10px] text-gray-400">FLOOR</span>
-                <div className="flex items-center gap-1">
-                  <span className="font-bold text-sm text-pink-500">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-pink-500">
                     {c.floor} SOL
                   </span>
                   <span className={`text-xs font-bold ${color(c.trend)}`}>

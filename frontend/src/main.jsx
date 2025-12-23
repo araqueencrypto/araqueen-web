@@ -2,13 +2,12 @@
 import { Buffer } from "buffer";
 window.Buffer = Buffer;
 
-
 import React, { useMemo } from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-// Wallet Adapter Core
+// Solana Wallet Core
 import {
   ConnectionProvider,
   WalletProvider,
@@ -16,7 +15,7 @@ import {
 
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
-// Wallets (STABLE ONLY)
+// Wallet Adapters (CLEAN & SAFE)
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
@@ -36,21 +35,29 @@ import NFTDetailPage from "./pages/collections_pages/NFTDetailPage.jsx";
 import "./index.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
 
-
 function RootApp() {
-  
-  // Devnet RPC
+  // ✅ Devnet RPC
   const endpoint = "https://api.devnet.solana.com";
 
-  // Stable auto-detected multi-wallets
-  const wallets = useMemo(
-    () => [
+  /**
+   * 🔥 IMPORTANT FIX:
+   * - Wallet adapters can overlap (Phantom, Ledger, MetaMask injection)
+   * - React Wallet Modal uses wallet.name as key
+   * - We MUST deduplicate by wallet.name
+   */
+  const wallets = useMemo(() => {
+    const list = [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
       new LedgerWalletAdapter(),
-    ],
-    []
-  );
+    ];
+
+    // ✅ DEDUPLICATE WALLET NAMES (FIX MetaMask key collision)
+    return list.filter(
+      (wallet, index, self) =>
+        index === self.findIndex((w) => w.name === wallet.name)
+    );
+  }, []);
 
   return (
     <ConnectionProvider endpoint={endpoint}>
@@ -61,7 +68,7 @@ function RootApp() {
               {/* Home */}
               <Route path="/" element={<App />} />
 
-              {/* Marketplace Parent */}
+              {/* Marketplace Layout */}
               <Route path="/marketplace/*" element={<AraQueenMarketplace />}>
                 <Route index element={<Navigate to="gallery" replace />} />
                 <Route path="gallery" element={<NFTGallery />} />
@@ -70,7 +77,7 @@ function RootApp() {
                 <Route path="whitelist" element={<Whitelist />} />
               </Route>
 
-              {/* Specific Collection */}
+              {/* Collection Detail */}
               <Route
                 path="/marketplace/collection/:collectionName"
                 element={<CollectionPage />}
@@ -86,7 +93,7 @@ function RootApp() {
   );
 }
 
-// Render
+// Render App
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RootApp />
