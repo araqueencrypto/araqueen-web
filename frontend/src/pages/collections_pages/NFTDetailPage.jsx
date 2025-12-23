@@ -1,71 +1,132 @@
-import React, { useEffect, useState } from "react";
+// NFTDetailPage.jsx — FINAL IMAGE & DATA FIX
+import React, { useEffect, useState, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getNFTDetail, getActivity } from "../../services/nftService";
 
+import NFTImageViewer from "./nft_comp/NFTImageViewer.jsx";
+import NFTActionPanel from "./nft_comp/NFTActionPanel";
+import NFTActivityHistory from "./nft_comp/NFTActivityHistory";
+import NFTPriceChart from "./nft_comp/NFTPriceChart";
+import NFTTraitsPanel from "./nft_comp/NFTTraitsPanel";
+
 const backendBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
-const getImageUrl = (raw) => {
-  if (!raw) return "/placeholder-nft.png";
-  if (raw.startsWith("http")) return raw;
-  return `${backendBaseUrl}/${raw.replace(/^\/+/, "")}`;
-};
+/* ================= IMAGE RESOLVER (FIX) ================= */
+function resolveImage(nft) {
+  if (!nft) return "/placeholder-nft.png";
 
+  const candidates = [
+    nft.image_local,
+    nft.image,
+    nft.image_link,
+    nft.image_url,
+    nft?.metadata?.image,
+  ];
+
+  for (let raw of candidates) {
+    if (!raw) continue;
+
+    // absolute url
+    if (raw.startsWith("http")) return raw;
+
+    // local backend file
+    const clean = raw.replace(/^\/+/, "");
+    return `${backendBaseUrl}/${clean}`;
+  }
+
+  return "/placeholder-nft.png";
+}
+
+/* ================= COMPONENT ================= */
 export default function NFTDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [nft, setNft] = useState(null);
+  const [activity, setActivity] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let alive = true;
+
     async function load() {
-      setLoading(true);
-      const data = await getNFTDetail(id);
-      setNft(data || null);
-      setLoading(false);
+      try {
+        setLoading(true);
+
+        const data = await getNFTDetail(id);
+        if (!alive) return;
+
+        setNft(data || null);
+
+        if (data?.mint_address) {
+          const act = await getActivity(data.mint_address);
+          if (alive) setActivity(act || []);
+        }
+      } catch (e) {
+        console.error("NFT detail load error:", e);
+        if (alive) setNft(null);
+      } finally {
+        if (alive) setLoading(false);
+      }
     }
+
     load();
+    return () => (alive = false);
   }, [id]);
 
-  if (loading) return <div className="p-6 text-center">Loading...</div>;
-  if (!nft) return <div className="p-6 text-center">NFT not found</div>;
+  const imageUrl = useMemo(() => resolveImage(nft), [nft]);
 
+  /* ================= STATES ================= */
+  if (loading)
+    return <div className="p-6 text-center text-gray-400">Loading NFT…</div>;
+
+  if (!nft)
+    return <div className="p-6 text-center text-gray-400">NFT not found.</div>;
+
+  /* ================= RENDER ================= */
   return (
-    <div className="p-3 sm:p-6 max-w-6xl mx-auto space-y-8">
+    <div className="p-3 sm:p-6 max-w-6xl mx-auto space-y-8 fade-in">
 
-      <button onClick={() => navigate(-1)} className="text-sm text-pink-500">
+      {/* BACK */}
+      <button
+        onClick={() => navigate(-1)}
+        className="text-sm text-pink-500 hover:underline"
+      >
         ← Back
       </button>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img
-          src={getImageUrl(nft.image)}
-          className="w-full aspect-square object-cover rounded-2xl"
-        />
+      {/* TOP */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
-        <div className="glass border rounded-2xl p-4 sm:p-6">
-          <h1 className="text-2xl font-bold grad-aura-text">{nft.name}</h1>
-          <p className="text-gray-400 mt-3">{nft.description}</p>
+        {/* IMAGE */}
+        <div className="glass border rounded-2xl p-4">
+          <NFTImageViewer image={imageUrl} name={nft.name} />
+        </div>
+
+        {/* INFO */}
+        <div className="glass border rounded-2xl p-5 space-y-4">
+          <h1 className="text-2xl font-bold grad-aura-text">
+            {nft.name || "Untitled NFT"}
+          </h1>
+
+          <p className="text-gray-400 text-sm leading-relaxed">
+            {nft.description || "No description provided."}
+          </p>
+
+          <NFTTraitsPanel nft={nft} />
+
         </div>
       </div>
 
-      {/* ACTION BAR */}
-      <div className="glass border rounded-2xl p-4 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-        <div className="text-2xl font-bold text-pink-500">
-          {nft.list_price || 0} SOL
-        </div>
+      {/* ACTION */}
+      <div className="glass border rounded-2xl p-4">
+        <NFTActionPanel nft={nft} />
+      </div>
 
-        <button className="grad-aura px-6 py-2 rounded-xl text-white font-semibold">
-          BUY
-        </button>
-
-        <div className="flex gap-2 sm:ml-auto">
-          <input
-            placeholder="0.00"
-            className="w-full sm:w-24 p-2 rounded-xl border bg-[var(--glass-bg)]"
-          />
-          <button className="px-4 py-2 border rounded-xl">BID</button>
-        </div>
+      {/* CHART + ACTIVITY */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <NFTPriceChart nft={nft} />
+        <NFTActivityHistory activity={activity} />
       </div>
     </div>
   );
